@@ -90,11 +90,11 @@ flex-direction: column;
 .primary-nav {
   display: flex;
   flex-direction: column;
+  text-align: center;
   background-image: url("../img/hero.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
   background-image: linear-gradient( rgba(0, 0, 0, 0.75) 10%, rgba(0, 0, 0, .05)), url("../img/hero.png");
 
 }
@@ -150,17 +150,17 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: calc(100vh - 360px);
-  padding: 60px 0 100px;
+  min-height: calc(100vh - 370px);
+  padding: 80px 0 100px;
 }
 
 .hero-title h1 {
-  font-size: 11vw;
+  font-size: 40px;
   line-height: 100%;
   font-weight: 300;
   text-transform: uppercase;
   color: white;
-  padding: 0px 0 20px;
+  padding: 0px 0 16px;
 }
 
 .hero-title p {
@@ -168,7 +168,7 @@ flex-direction: column;
   line-height: 1.5rem;
   font-weight: 300;
   color: white;
-  padding: 0 50px 10px;
+  padding: 0 40px 20px;
   opacity: 100%;
 }
 
@@ -282,25 +282,25 @@ flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 120px;
+  padding: 160px 0 180px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../img/feature.png");
 }
 
 .feature-title h2 {
   font-size: 11vw;
-  line-height: 4rem;
+  line-height: 100%;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   color: white;
-  padding: 0px 0 20px;
+  padding: 0px 0 16px;
 }
 
 .feature-title p, .feature-title a {
   font-size: 1.2rem;
   font-weight: 300;
   color: white;
-  padding: 0 0 10px;
+  padding: 0 0 20px;
   opacity: 100%;
 }
 
@@ -387,7 +387,7 @@ footer {
 
   .hero-title h1,
   .feature-title h2 {
-    font-size: 9.75vw;
+    font-size: 8vw;
     width: 100%;
   }
     
@@ -397,7 +397,7 @@ footer {
  
   .home .feature-category {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 10px;
     margin: 10px;
   }
@@ -429,7 +429,7 @@ footer {
 
   .hero-title h1,
   .feature-title h2 {
-    font-size: 66px;
+    font-size: 60px;
     width: 100%;
   }
 
