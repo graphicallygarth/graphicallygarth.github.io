@@ -155,7 +155,7 @@ flex-direction: column;
 }
 
 .hero-title h1 {
-  font-size: 40px;
+  font-size: 34px;
   line-height: 100%;
   font-weight: 300;
   text-transform: uppercase;
@@ -287,7 +287,7 @@ flex-direction: column;
 }
 
 .feature-title h2 {
-  font-size: 11vw;
+  font-size: 34px;
   line-height: 100%;
   font-weight: 300;
   text-align: center;
