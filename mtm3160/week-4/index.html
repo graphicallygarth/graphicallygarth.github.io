@@ -11,16 +11,21 @@
   <!-- Shortcut for comment block - control + / or Command + / -->
   <!-- Header of the site -->
   <header>
-    <h1>Reggie's Coffee Shop - Home</h1>
+    <h1>Reggie's Coffee Shop</h1>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <!-- main content of the site -->
   <main>
+    <a href="#tow">Treat of the week</a>
     <article>
       <h2>Our Story</h2>
       <!-- adding image -->
@@ -59,7 +64,7 @@
       </ol>
     </section>
     <!-- Adding section for the description list -->
-    <section>
+    <section id="tow">
       <h3>Treat of the Week</h3>
       <dl>
         <dt>Name</dt>
@@ -72,13 +77,40 @@
         <dd>all purpose flour, baking soda, baking powder, salt, butter, sugar, eggs, bananas, lemon juice</dd>
       </dl>
       <a href="https://www.yummly.com/recipe/Banana-Bread-1033797?prm-v1" target="_blank">Get the Recipe</a>
-
+    </section>
+    <!-- Adding a section for menu -->
+    <section>
+      <h3>Menu Specials</h3>
+      <table border>
+        <thead>
+          <tr>
+            <th colspan="2">Items</th>
+            <th rowspan="2">Price</th>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Banana Bread</td>
+            <td>250</td>
+            <td>&dollar; 6</td>
+          </tr>
+          <tr>
+            <td>Oatmeal</td>
+            <td>110</td>
+            <td>&dollar; 8</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
   <!-- footer of the site -->
   <footer>
     <!-- HTML Entities -->
-    Copyright &copy; Reggie&apos;s Coffee Shop, 2020&copy;
+    Copyright &copy; Reggie&apos;s Coffee Shop, 2020 &dollar;20
   </footer>
 </body>
 
