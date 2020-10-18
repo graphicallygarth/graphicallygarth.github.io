@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
 /* Start Global */
 
@@ -17,10 +17,11 @@ html {
   font-size: 100%;
 }
 
+/* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  background-color: #444;
+  background-color: rgb(55, 64, 62);
 }
 
 .container {
@@ -45,6 +46,13 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
+  line-height: 1.85rem;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
   line-height: 1.85rem;
 }
 
@@ -90,12 +98,11 @@ flex-direction: column;
 .primary-nav {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  background-image: url("../img/hero.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.75) 10%, rgba(0, 0, 0, .05)), url("../img/hero.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, .05)), url("../img/hero.png");
+  background-color: black;
 
 }
 
@@ -144,38 +151,32 @@ flex-direction: column;
   transition: .3s ease;
 }
 
-.hero-title {
+.hero {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  min-height: calc(100vh - 370px);
-  padding: 80px 0 100px;
+  min-height: calc(100vh - 260px);
+  padding: 30px;
 }
 
-.hero-title h1 {
+.hero h1 {
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 34px;
-  line-height: 100%;
   font-weight: 300;
   text-transform: uppercase;
   color: white;
-  padding: 0px 0 16px;
 }
 
-.hero-title p {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+.hero p {
+  font-size: 1.35rem;
+  line-height: 2.5rem;
   font-weight: 300;
   color: white;
-  padding: 0 40px 20px;
-  opacity: 100%;
 }
 
-.hero-title a:link,
-.hero-title a:visited {
-  font-size: 1.2rem;
-  align-self: center;
+.hero a:link,
+.hero a:visited {
+  display: inline-block;
+  align-self: left;
   font-weight: 300;
   margin: 10px 0 0;
   padding: 12px 25px;
@@ -184,7 +185,7 @@ flex-direction: column;
   border-radius: 2px;
 }
 
-.hero-title a:hover {
+.hero a:hover {
   font-weight: 300;
   background-color: white;
   color: var(--primary-black);
@@ -193,6 +194,7 @@ flex-direction: column;
 
 .feature-nav {
   font-size: 14px;
+  line-height: 18px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -220,7 +222,7 @@ flex-direction: column;
   transition: 0.3s;
 }
 
-.cta {
+.cta{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -287,7 +289,8 @@ flex-direction: column;
 }
 
 .feature-title h2 {
-  font-size: 34px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 40px;
   line-height: 100%;
   font-weight: 300;
   text-align: center;
@@ -374,10 +377,19 @@ footer {
 }
 
 .copyright p {
-	font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 	text-align: center;
 	color: white;
-	padding: 4px;
+	padding: 0;
+}
+
+.copyright a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+	text-align: center;
+	color: white;
+	padding: 0;
 }
 
 
@@ -385,7 +397,14 @@ footer {
 
 @media (min-width: 420px) {
 
-  .hero-title h1,
+  .hero {
+    max-width: 600px;
+    min-height: 100%;
+    align-items: flex-start;
+    padding: 80px 0 100px 40px;
+    margin: 0 5% 0;
+  }
+
   .feature-title h2 {
     font-size: 8vw;
     width: 100%;
@@ -420,14 +439,12 @@ footer {
     display: flex;
     flex-direction: column;
     height: 100%;
-    text-align: center;
   }
   
   .logo {
     margin-right: auto;
   }
 
-  .hero-title h1,
   .feature-title h2 {
     font-size: 60px;
     width: 100%;
