@@ -160,10 +160,26 @@ flex-direction: column;
 
 .hero h1 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 34px;
+  font-size: 40px;
+  line-height: 100%;
   font-weight: 300;
+  text-align: left;
   text-transform: uppercase;
   color: white;
+  padding: 0px 0 16px;
+  opacity: 90%;
+}
+
+.hero h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 200;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+  padding: 0px 0 16px;
+  opacity: 95%;
 }
 
 .hero p {
@@ -173,20 +189,22 @@ flex-direction: column;
   color: white;
 }
 
-.hero a:link,
-.hero a:visited {
+.hero a {
   display: inline-block;
-  align-self: left;
-  font-weight: 300;
+  font-size: 1.2rem;
+  align-self: center;
   margin: 10px 0 0;
   padding: 12px 25px;
+} 
+
+.hero a:link,
+.hero a:visited {
   background-color: var(--primary-black);
   color: white;
   border-radius: 2px;
 }
 
 .hero a:hover {
-  font-weight: 300;
   background-color: white;
   color: var(--primary-black);
   transition: .3s;
@@ -279,7 +297,7 @@ flex-direction: column;
   opacity: 80%;
 }
 
-.feature-title {
+.feature-article {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,7 +306,7 @@ flex-direction: column;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../img/feature.png");
 }
 
-.feature-title h2 {
+.feature-article h2 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 40px;
   line-height: 100%;
@@ -299,7 +317,14 @@ flex-direction: column;
   padding: 0px 0 16px;
 }
 
-.feature-title p, .feature-title a {
+.feature-article h3 {
+  font-size: 1.35rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  color: white;
+}
+
+.feature-article p, .feature-article a {
   font-size: 1.2rem;
   font-weight: 300;
   color: white;
@@ -307,8 +332,8 @@ flex-direction: column;
   opacity: 100%;
 }
 
-.feature-title a:link,
-.feature-title a:visited {
+.feature-article a:link,
+.feature-article a:visited {
   align-self: center;
   font-weight: 300;
   margin: 10px 0 0;
@@ -318,7 +343,7 @@ flex-direction: column;
   border-radius: 2px;
 }
 
-.feature-title a:hover {
+.feature-article a:hover {
   font-weight: 300;
   background-color: white;
   color: var(--primary-black);
@@ -398,16 +423,18 @@ footer {
 @media (min-width: 420px) {
 
   .hero {
-    max-width: 600px;
     min-height: 100%;
     align-items: flex-start;
-    padding: 80px 0 100px 40px;
-    margin: 0 5% 0;
+    padding: 80px 20px 100px 20px;
+    margin: 0 3% 0;
   }
 
-  .feature-title h2 {
+  .hero h1, .feature-article h2 {
     font-size: 8vw;
-    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 6.5vw;
   }
     
   .cta {
@@ -445,8 +472,18 @@ footer {
     margin-right: auto;
   }
 
-  .feature-title h2 {
+  .hero {
+    max-width: 82%;
+    margin: 0 5% 0;
+  }
+
+  .hero h1, .feature-article h2 {
     font-size: 60px;
+    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 30pt;
     width: 100%;
   }
 
