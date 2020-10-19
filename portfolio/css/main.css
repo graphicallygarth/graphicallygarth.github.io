@@ -153,38 +153,34 @@ flex-direction: column;
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   min-height: calc(100vh - 260px);
   padding: 30px;
 }
 
 .hero h1 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 40px;
-  line-height: 100%;
-  font-weight: 300;
+  font-size: 2rem;
+  line-height: 4rem;
   text-align: left;
   text-transform: uppercase;
   color: white;
-  padding: 0px 0 16px;
   opacity: 90%;
 }
 
 .hero h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 40px;
-  line-height: 100%;
-  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 2rem;
   text-align: left;
-  text-transform: uppercase;
   color: white;
   padding: 0px 0 16px;
   opacity: 95%;
 }
 
 .hero p {
-  font-size: 1.35rem;
-  line-height: 2.5rem;
+  font-size: 18px;
+  line-height: 1.5rem;
   font-weight: 300;
   color: white;
 }
