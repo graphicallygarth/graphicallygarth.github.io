@@ -153,28 +153,27 @@ flex-direction: column;
 
 .hero {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   min-height: calc(100vh - 260px);
   padding: 30px;
 }
 
 .hero h1 {
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2rem;
-  line-height: 4rem;
-  text-align: left;
-  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 300;
   color: white;
+  padding: 0 10px 32px;
   opacity: 90%;
 }
 
 .hero h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2px;
   line-height: 2rem;
-  text-align: left;
   color: white;
-  padding: 0px 0 16px;
+  padding: 0px 10px 16px;
   opacity: 95%;
 }
 
