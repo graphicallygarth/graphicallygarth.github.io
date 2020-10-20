@@ -169,9 +169,8 @@ flex-direction: column;
 }
 
 .hero h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2px;
-  line-height: 2rem;
+  font-size: 22px;
+
   color: white;
   padding: 0px 10px 16px;
   opacity: 95%;
