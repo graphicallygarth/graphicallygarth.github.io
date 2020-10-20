@@ -103,6 +103,7 @@ flex-direction: column;
   background-size: cover;
   background-image: linear-gradient( rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, .05)), url("../img/hero.png");
   background-color: black;
+  background-attachment: fixed;
 
 }
 
@@ -156,8 +157,7 @@ flex-direction: column;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  min-height: calc(100vh - 260px);
-  padding: 30px;
+  padding: 60px 30px;
 }
 
 .hero h1 {
@@ -169,10 +169,9 @@ flex-direction: column;
 }
 
 .hero h2 {
-  font-size: 22px;
-
+  align-self: center;
+  font-size: 18px;
   color: white;
-  padding: 0px 10px 16px;
   opacity: 95%;
 }
 
@@ -193,7 +192,7 @@ flex-direction: column;
 
 .hero a:link,
 .hero a:visited {
-  background-color: var(--primary-black);
+  background-color: red;
   color: white;
   border-radius: 2px;
 }
@@ -212,7 +211,8 @@ flex-direction: column;
   flex-wrap: wrap;
   text-transform: uppercase;
   padding: 20px 10px;
-  background-image: linear-gradient(to right, red, green, blue);
+  /*background-image: linear-gradient(to right, red, green, blue);*/
+  background-color: var(--primary-black);
 }
 
 .feature-nav li {
@@ -235,6 +235,7 @@ flex-direction: column;
 }
 
 .cta{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -243,6 +244,7 @@ flex-direction: column;
   text-align: center;
   padding: 40px 20px;
   background-color: #DEDEDE;
+  opacity: 80%;
 }
 
 .cta h2 {
@@ -420,7 +422,6 @@ footer {
     min-height: 100%;
     align-items: flex-start;
     padding: 80px 20px 100px 20px;
-    margin: 0 3% 0;
   }
 
   .hero h1, .feature-article h2 {
