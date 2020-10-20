@@ -157,36 +157,21 @@ flex-direction: column;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 60px 30px;
+  padding: 60px 0 80px;
 }
 
 .hero h1 {
   font-size: 28px;
   font-weight: 300;
   color: white;
-  padding: 0 10px 32px;
   opacity: 90%;
-}
-
-.hero h2 {
-  align-self: center;
-  font-size: 18px;
-  color: white;
-  opacity: 95%;
-}
-
-.hero p {
-  font-size: 18px;
-  line-height: 1.5rem;
-  font-weight: 300;
-  color: white;
 }
 
 .hero a {
   display: inline-block;
   font-size: 1.2rem;
   align-self: center;
-  margin: 10px 0 0;
+  margin: 50px 0 0;
   padding: 12px 25px;
 } 
 
@@ -418,18 +403,15 @@ footer {
 
 @media (min-width: 420px) {
 
-  .hero {
-    min-height: 100%;
-    align-items: flex-start;
-    padding: 80px 20px 100px 20px;
-  }
-
-  .hero h1, .feature-article h2 {
+  .feature-article h2 {
     font-size: 8vw;
+    line-height: 60px;
+    margin: 0 5% 0;
   }
 
-  .hero h2 {
-    font-size: 6.5vw;
+  .hero h1 {
+    font-size: 8vw;
+    line-height: 10vw;
   }
     
   .cta {
@@ -453,6 +435,12 @@ footer {
     display: block;
     margin: 0 18px 0 0;
   }
+
+  .hero h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -467,18 +455,9 @@ footer {
     margin-right: auto;
   }
 
-  .hero {
-    max-width: 82%;
-    margin: 0 5% 0;
-  }
 
-  .hero h1, .feature-article h2 {
+  .feature-article h2 {
     font-size: 60px;
-    width: 100%;
-  }
-
-  .hero h2 {
-    font-size: 30pt;
     width: 100%;
   }
 
