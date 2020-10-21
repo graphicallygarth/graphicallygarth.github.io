@@ -83,24 +83,17 @@ p {
 nav {
 display: flex;
 flex-direction: column;
-justify-content: space-between;
 min-height: 100vh;
 background-image: linear-gradient( rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, .05)), url("../img/hero.png");
 background-position: center top;
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
-
 }
 
 .fa-object-group, .fa-video, .fa-code {
   font-size: 30px;
   margin-bottom: 10px;
-}
-
-.primary-nav {
-  display: flex;
-  flex-direction: column;
 }
 
 .navbar {
@@ -148,11 +141,10 @@ background-attachment: fixed;
 
 /* nav flex item */
 .hero {
-  width: 100%;
-  align-self: center;
   display: flex;
   flex-direction: column;
-  padding: 40px 0 60px;
+  padding: 50px 0 80px;
+  margin: auto 0;
 }
 
 .hero h1 {
@@ -177,20 +169,10 @@ background-attachment: fixed;
   margin: 0 auto;
 }
 
-.hero h3 {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 18px;
-  text-align: center;
-  color: white;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
 .hero a {
   display: inline-block;
   font-size: 1.2rem;
   align-self: center;
-  margin: 10px 0 0;
   padding: 12px 25px;
 } 
 
