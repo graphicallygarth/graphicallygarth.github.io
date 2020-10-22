@@ -26,7 +26,6 @@ body {
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
   background-color: white;
 }
 
@@ -83,7 +82,7 @@ p {
 nav {
 display: flex;
 flex-direction: column;
-min-height: calc(100vh - 120px);
+min-height: 75vh;
 background-image: linear-gradient( rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, .05)), url("../img/hero.png");
 background-position: center top;
 background-repeat: no-repeat;
@@ -412,15 +411,6 @@ footer {
 
 @media (min-width: 420px) {
 
-  nav {
-    display: flex;
-    min-height: 100vh;
-    }
-
-    .hero {
-      padding: 50px 0 100px;
-    }
-
   .feature-article h2 {
     font-size: 8vw;
     line-height: 60px;
@@ -430,14 +420,16 @@ footer {
   .cta {
     flex-direction: row;
   }
- 
-  .home .feature-category {
-    display: grid;
-    grid-template-columns: 1fr;
+}
+
+@media (orientation: landscape) {
+
+  .hero h2 {
+    font-size: 6vw;
   }
 }
 
-@media (min-width: 570px) {
+@media (min-width: 768px) {
 
   .social-icons li:nth-child(1),
   .social-icons li:nth-child(2),
@@ -450,25 +442,6 @@ footer {
   .home .feature-category {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .hero h2 {
-    font-size: 9vw;
-    padding: 20px 50px 40px;
-
-}
-
-}
-
-@media (min-width: 768px) {
-  
-  .logo {
-    margin-right: auto;
-  }
-
-  .hero h2 {
-    font-size: 4vw;
-    padding: 20px 0 40px;
   }
 
   .feature-article h2 {
@@ -495,9 +468,9 @@ footer {
   }
 }
 
-@media (min-width: 1366px){
+@media (min-width: 1024px){
 
   .hero h2 {
-      font-size: 54px;
+      font-size: 60px;
   }
 }
