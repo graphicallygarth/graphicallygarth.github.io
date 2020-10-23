@@ -82,7 +82,7 @@ p {
 nav {
 display: flex;
 flex-direction: column;
-min-height: 75vh;
+min-height: 100vh;
 background-image: linear-gradient( rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, .05)), url("../img/hero.png");
 background-position: center top;
 background-repeat: no-repeat;
@@ -140,8 +140,11 @@ background-attachment: fixed;
 
 /* nav flex item */
 .hero {
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   padding: 50px 0 80px;
   margin: auto 0;
 }
@@ -153,6 +156,7 @@ background-attachment: fixed;
   color: white;
   text-align: center;
   opacity: 90%;
+
 }
 
 .hero h2 {
@@ -166,22 +170,26 @@ background-attachment: fixed;
   text-transform: uppercase;
   padding: 20px 0 40px;
   margin: 0 auto;
+  opacity: 90%;
 }
 
 .hero p {
+  display: inline-block;
+  width: fit-content;
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
   font-weight: 100;
   color: white;
   text-align: center;
-  margin: 80px 0 0;
+  padding: 10px 0 10px;
+  margin: 10px auto 10px;
   opacity: 90%;
 }
 
 /* Progressive UX Design & - .hero p */
 .strong-keyword {
   font-size: 5vw;
-  font-weight: 800;
+  font-weight: 200;
   display: inline-block;
   width: 100%;
 }
@@ -191,6 +199,7 @@ background-attachment: fixed;
   font-size: 1.2rem;
   align-self: center;
   padding: 12px 25px;
+  margin: 10px 0;
 } 
 
 .hero a:link,
@@ -301,18 +310,21 @@ background-attachment: fixed;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 160px 0 180px;
+  padding: 80px 0 80px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../img/feature.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: left top;
+  background-color: var(--primary-black);
+  /* border-top: 100px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 100px solid rgba(0, 0, 0, 0.5);*/
 }
 
 .feature-article h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 40px;
   line-height: 100%;
-  font-weight: 300;
+  font-weight: 100;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -449,9 +461,6 @@ footer {
     /* Progressive UX Design & - .hero p */
   .strong-keyword {
     font-size: 3vw;
-    font-weight: 800;
-    display: inline-block;
-    width: 100%;
     }
 }
 
@@ -467,7 +476,7 @@ footer {
 
   .home .feature-category {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .feature-article h2 {
@@ -497,7 +506,9 @@ footer {
 @media (min-width: 1024px){
 
   .hero h2 {
-      font-size: 60px;
+      font-size: 80px;
+      align-self: flex-end;
+      width: 800px;
   }
 
   /* Progressive UX Design & - .hero p */
