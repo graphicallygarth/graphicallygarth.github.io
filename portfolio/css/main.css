@@ -168,6 +168,24 @@ background-attachment: fixed;
   margin: 0 auto;
 }
 
+.hero p {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  margin: 80px 0 0;
+  opacity: 90%;
+}
+
+/* Progressive UX Design & - .hero p */
+.strong-keyword {
+  font-size: 5vw;
+  font-weight: 800;
+  display: inline-block;
+  width: 100%;
+}
+
 .hero a {
   display: inline-block;
   font-size: 1.2rem;
@@ -427,6 +445,14 @@ footer {
   .hero h2 {
     font-size: 6vw;
   }
+
+    /* Progressive UX Design & - .hero p */
+  .strong-keyword {
+    font-size: 3vw;
+    font-weight: 800;
+    display: inline-block;
+    width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -472,5 +498,10 @@ footer {
 
   .hero h2 {
       font-size: 60px;
+  }
+
+  /* Progressive UX Design & - .hero p */
+  .strong-keyword {
+  font-size: 30px;
   }
 }
