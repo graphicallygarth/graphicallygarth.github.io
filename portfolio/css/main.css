@@ -188,10 +188,11 @@ background-attachment: fixed;
 
 /* Progressive UX Design & - .hero p */
 .strong-keyword {
-  font-size: 5vw;
+  font-size: 20px;
   font-weight: 200;
   display: inline-block;
   width: 100%;
+  text-transform: none;
 }
 
 .hero a {
@@ -459,8 +460,8 @@ footer {
   }
 
     /* Progressive UX Design & - .hero p */
-  .strong-keyword {
-    font-size: 3vw;
+  .hero h1, .strong-keyword {
+    font-size: 2.9vw;
     }
 }
 
@@ -506,13 +507,12 @@ footer {
 @media (min-width: 1024px){
 
   .hero h2 {
-      font-size: 80px;
-      align-self: flex-end;
-      width: 800px;
+      font-size: 60px;
+
   }
 
   /* Progressive UX Design & - .hero p */
-  .strong-keyword {
-  font-size: 30px;
+  .hero h1, .strong-keyword {
+  font-size: 24px;
   }
 }
