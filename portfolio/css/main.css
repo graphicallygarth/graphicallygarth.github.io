@@ -162,7 +162,7 @@ background-attachment: fixed;
 .hero h2 {
   width: 80%;
   font-family: 'Exo 2', sans-serif;
-  font-size: 11vw;
+  font-size: 12vw;
   line-height: 80%;
   font-weight: 100;
   color: whitesmoke;
@@ -187,7 +187,7 @@ background-attachment: fixed;
 }
 
 /* Progressive UX Design & - .hero p */
-.strong-keyword {
+.hero .strong-keyword {
   font-size: 20px;
   font-weight: 200;
   display: inline-block;
@@ -340,7 +340,7 @@ background-attachment: fixed;
 }
 
 .feature-article p, .feature-article a {
-  font-size: 1.2rem;
+  font-size: 20px;
   font-weight: 300;
   color: white;
   padding: 0 0 20px;
@@ -442,6 +442,10 @@ footer {
 
 @media (min-width: 420px) {
 
+  .hero h1, .hero .strong-keyword {
+    font-size: 3.5vw;
+  }
+
   .feature-article h2 {
     font-size: 8vw;
     line-height: 60px;
@@ -459,10 +463,9 @@ footer {
     font-size: 6vw;
   }
 
-    /* Progressive UX Design & - .hero p */
-  .hero h1, .strong-keyword {
-    font-size: 2.9vw;
-    }
+  .hero h1, .hero .strong-keyword {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -507,12 +510,10 @@ footer {
 @media (min-width: 1024px){
 
   .hero h2 {
-      font-size: 60px;
-
+    font-size: 60px;
   }
 
-  /* Progressive UX Design & - .hero p */
-  .hero h1, .strong-keyword {
-  font-size: 24px;
+  .hero h1, .hero .strong-keyword {
+    font-size: 18px;
   }
 }
