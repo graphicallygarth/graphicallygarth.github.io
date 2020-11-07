@@ -140,7 +140,6 @@ background-attachment: fixed;
 
 /* nav flex item */
 .hero {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,6 +155,9 @@ background-attachment: fixed;
   color: white;
   text-align: center;
   opacity: 90%;
+  width: fit-content;
+  align-self: center;
+  padding: 0 20px;
 
 }
 
