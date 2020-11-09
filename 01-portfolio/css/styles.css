@@ -168,7 +168,13 @@ background-attachment: fixed;
   line-height: .75rem;
   margin: 0 0 20px;
   opacity: 90%;
+<<<<<<< HEAD:03-portfolio/css/main.css
   border-bottom: thin dotted whitesmoke;
+=======
+  width: fit-content;
+  align-self: center;
+  padding: 0 20px;
+>>>>>>> 41a9e0f2633e14191b8c4c5861366b0a6ecc66c9:01-portfolio/css/styles.css
 
 }
 
