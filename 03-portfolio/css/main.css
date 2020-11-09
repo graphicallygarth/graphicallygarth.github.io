@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* Start Global */
 
@@ -108,6 +114,7 @@ background-attachment: fixed;
 .logo a {
   display: flex;
   align-items: center;
+  font-family: 'Catamaran', sans-serif;
   color: white;
   margin-right: auto;
 }
@@ -150,33 +157,47 @@ background-attachment: fixed;
 }
 
 .hero h1 {
-  font-family: 'Exo 2', sans-serif;
+  display: inline-block;
+  width: fit-content;
+  /* font-family: 'Exo 2', sans-serif; */
+  font-family: 'Catamaran', sans-serif;
   font-size: 30px;
   font-weight: 100;
   color: white;
   text-align: center;
+  align-self: center;
+  line-height: .75rem;
+  margin: 0 0 20px;
   opacity: 90%;
+  border-bottom: thin dotted whitesmoke;
 
 }
 
 .hero h2 {
   width: 80%;
-  font-family: 'Exo 2', sans-serif;
+  /* font-family: 'Exo 2', sans-serif; */
+  /* font-family: 'Crimson Text', serif; */
+  /* font-family: 'Crimson Pro', serif; */
+  /* font-family: 'Grandstander', cursive; */
+  /* font-family: 'Abril Fatface', cursive; */
+  /* font-family: 'Catamaran', sans-serif; */
+  font-family: 'Press Start 2P', cursive;
   font-size: 12vw;
   line-height: 80%;
-  font-weight: 100;
+  font-weight: 300;
   color: whitesmoke;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 20px 0 40px;
   margin: 0 auto;
-  opacity: 90%;
+  opacity: 60%;
 }
 
 .hero p {
   display: inline-block;
   width: fit-content;
-  font-family: 'Exo 2', sans-serif;
+  /* font-family: 'Exo 2', sans-serif; */
+  font-family: 'Catamaran', sans-serif;
   font-size: 20px;
   font-weight: 100;
   color: white;
@@ -186,7 +207,6 @@ background-attachment: fixed;
   opacity: 90%;
 }
 
-/* Progressive UX Design & - .hero p */
 .hero .strong-keyword {
   font-size: 20px;
   font-weight: 200;
@@ -205,9 +225,11 @@ background-attachment: fixed;
 
 .hero a:link,
 .hero a:visited {
-  background-color: red;
+  background-color: var(--primary-black);
   color: white;
   border-radius: 2px;
+  opacity: 80%;
+  border: thin dotted rgba(255, 255, 255, 0.5);
 }
 
 .hero a:hover {
@@ -510,7 +532,7 @@ footer {
 @media (min-width: 1024px){
 
   .hero h2 {
-    font-size: 60px;
+    font-size: 30px;
   }
 
   .hero h1, .hero .strong-keyword {
