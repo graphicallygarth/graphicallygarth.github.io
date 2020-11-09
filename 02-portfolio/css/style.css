@@ -123,7 +123,7 @@ nav {
 	width: 100%;
 	margin: 30px auto 0;
 	text-align: center;
-	border: 1px dotted whitesmoke;
+	border: 1px solid whitesmoke;
 	border-radius: 20px;
 }
 
@@ -162,7 +162,7 @@ nav {
 
 .feature-nav a:nth-child(1),
 .feature-nav a:nth-child(2) {
-	border-right: thin dotted rgba(245, 245, 245, 0.5);
+	border-right: thin solid rgba(245, 245, 245, 0.5);
 }
 
 header h1 {
@@ -181,7 +181,7 @@ header h1 {
 }
 
 article {
-	border: 1px dotted whitesmoke;
+	border: 1px solid whitesmoke;
 	border-radius: 25px 25px 25px 25px;
 	padding: 0px 10px 10px 10px;
 	margin-bottom: 40px;
@@ -199,7 +199,7 @@ article h2 {
 
 article p {
 	border-radius: 25px 25px 25px 25px;
-	border: 1px dotted whitesmoke;
+	border: 1px solid whitesmoke;
 	color:	#091a2b;
 	background-color: whitesmoke;
 
