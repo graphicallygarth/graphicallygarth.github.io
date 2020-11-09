@@ -123,7 +123,7 @@ nav {
 	width: 100%;
 	margin: 30px auto 0;
 	text-align: center;
-	border: 1px solid whitesmoke;
+	border: thin solid whitesmoke;
 	border-radius: 20px;
 }
 
@@ -181,7 +181,7 @@ header h1 {
 }
 
 article {
-	border: 1px solid whitesmoke;
+	border: thin solid whitesmoke;
 	border-radius: 25px 25px 25px 25px;
 	padding: 0px 10px 10px 10px;
 	margin-bottom: 40px;
@@ -199,32 +199,76 @@ article h2 {
 
 article p {
 	border-radius: 25px 25px 25px 25px;
-	border: 1px solid whitesmoke;
+	border: thin solid whitesmoke;
 	color:	#091a2b;
 	background-color: whitesmoke;
-
 }
 
 
-footer {
-	padding: 30px;
+.primary-footer {
+	font-size: 1.1rem;
 	text-align: center;
-	margin: 0 auto;
-}
-
-footer p {
-
-	font-family: 'Oswald', sans-serif;
-	font-weight: 200;
-	font-size: 4vw;
-	line-height: 5vw;
-	text-align: center;
-	color: whitesmoke;
-}
-
-footer p:nth-child(2) {
-	font-size: 3.5vw;
-	}
+	padding: 50px 0 20px;
+  }
+  
+  .footer-buttons li {
+	  width: 180px;
+	  margin: 0 auto;
+	  padding: 10px 0;
+  }
+  
+  .footer-buttons li a:link,
+  .footer-buttons li a:visited {
+	  display: block;
+	  width: 100%;
+	  padding: 14px;
+	  color: white;
+	  background-color: rgba(255,255,255,.1);
+  }
+  
+  .footer-buttons li a:hover {
+	  color: var(--primary-black);
+	  background-color: white;
+	  transition: all ease-in .2s;
+  }
+  
+  .project-button {
+	width: 240px;
+	margin: 40px auto 0;
+	color: white;
+  }
+  
+  .project-button a {
+	margin: 10px auto;
+  }
+  
+  .footer-icons {
+	display: flex;
+	justify-content: space-between;
+	width: 180px;
+	padding: 20px 0 0;
+	margin: 0px auto;
+  }
+  
+  .copyright {
+	padding: 20px 0 80px 0;
+  }
+  
+  .copyright p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	  text-align: center;
+	  color: white;
+	  padding: 0;
+  }
+  
+  .copyright a {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	  text-align: center;
+	  color: white;
+	  padding: 0;
+  }
 
 
 /* Start Small Screen Adjustments */
@@ -250,9 +294,9 @@ footer p:nth-child(2) {
 	.social-icons li:nth-child(2),
 	.social-icons li:nth-child(3),
 	.social-icons li:nth-child(4) {
-    display: block;
-    margin: 0 18px 0 0;
-  }
+    	display: block;
+		margin: 0 18px 0 0;
+	}
 
 	header h1 {
 		font-size: 46px;
@@ -260,9 +304,27 @@ footer p:nth-child(2) {
 	}
 
 	.fa-heart {
-	  font-size: 44px;
-	  margin: 0 15px 10px 0;
+		font-size: 44px;
+		margin: 0 15px 10px 0;
 	}
+
+	.primary-footer {
+		flex-wrap: wrap;
+		padding: 0;
+	}
+	
+	  .footer-buttons li {
+		width: 150px;
+		text-align: center;
+		margin: 10px 10px 0;
+	  }
+	
+	  .footer-buttons {
+		display: flex;
+		justify-content: center;
+		flex-basis: 100%;
+		padding: 60px 0 0;
+	  }
 }
 
 
