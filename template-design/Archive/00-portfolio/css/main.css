@@ -15,12 +15,14 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   background-color: rgb(55, 64, 62);
+
 }
 
 .wrapper {
@@ -150,7 +152,7 @@ background-attachment: fixed;
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
   font-weight: 100;
-  color: white;
+  color: whitesmoke;
   text-align: center;
   opacity: 90%;
 }
@@ -177,8 +179,7 @@ background-attachment: fixed;
 
 .hero a:link,
 .hero a:visited {
-  background-color: red;
-  color: white;
+  color: whitesmoke;
   border-radius: 2px;
 }
 
@@ -244,7 +245,6 @@ background-attachment: fixed;
 .cta a:visited {
   font-weight: 300;
   padding: 12px 25px;
-  color: white;
   border-radius: 2px;
   background-color: var(--primary-black);
 }
@@ -253,7 +253,7 @@ background-attachment: fixed;
   font-weight: 300;
   color: var(--primary-black);
   transition: .3s;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 /* Start Main */
