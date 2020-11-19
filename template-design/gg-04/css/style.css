@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
@@ -15,11 +16,15 @@
 html {
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 100%;
 }
 
 body {
 	background-color: var(--secondary-color);
+}
+
+.container {
+	width: 100%;
 }
 
 .wrapper {
@@ -41,31 +46,29 @@ header {
 /* --- Font Family Defaults --- */
 
 h1 {
-	font-family: 'Press Start 2P', cursive;
+	font-family: 'Kosugi Maru', sans-serif;
+	font-size: 2rem;
+	letter-spacing: 4px;
 	color: whitesmoke;
 }
 
 h2 {
 	font-family: 'Kosugi Maru', sans-serif;
 	font-size: 24px;
-	font-weight: 400;
 	color: whitesmoke;
 }
 
 p {
 	font-family: 'Kosugi Maru', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.75rem;
-	color: whitesmoke
-}
-
-.cta a {
-	font-family: 'Kosugi Maru', sans-serif;
+	color: whitesmoke;
 }
 
 button {
 	font-family: 'Kosugi Maru', sans-serif;
 	font-size: 30px;
+	text-transform: uppercase;
 }
 
 
@@ -74,7 +77,10 @@ button {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-auto-rows: minmax(300px, auto);
+	/* dynamic rows */  
+	grid-auto-flow: row;
+	  grid-auto-rows: minmax(100px, auto);
+	  grid-gap: 20px;
 }
 
 img {
@@ -90,7 +96,7 @@ button, input, textarea, .cta {
 	width: 30px;
 }
   
-.fa-icon:hover {
+.fa-icon:hover, .logo:hover {
 	transform: scale(1.2);
 	transition: .3s ease;
 }
@@ -106,23 +112,18 @@ button, input, textarea, .cta {
 	align-items: center;
 	flex-wrap: wrap;
 	color: white;
-	padding: 40px;
-	margin-bottom: 50px;
+	padding: 50px 30px;
 	/* border: 20px solid rgba(245, 245, 245, 0.05); */
 	background-color: var(--background-color);
   }
   
-.cta h2 {
-	text-align: center;
-	margin: 10px 10px;
-}
+
 
 .cta p {
-	  margin-bottom: 20px;
+	margin: 30px 0 50px;
 }
   
 .cta a {
-	margin: 10px 10px;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -131,14 +132,6 @@ button, input, textarea, .cta {
 .cta a:visited {
 	padding: 16px 55px;
 	background-color: rgba(245, 245, 245, 0.1);
-}
-  
-.cta a:hover,
-.cta a:focus,
-.cta a:active {
-	color: var(--primary-black);
-	transition: .3s;
-	background-color: white;
 }
 
 .cta a:link,
@@ -151,7 +144,7 @@ button, input, textarea, .cta {
 .cta a:hover,
 .cta a:focus {
   transition: .3s;
-  color: var(--primary-black);
+  color: var(--hover);
   background-color: white;
 }
 
@@ -165,7 +158,7 @@ button, input, textarea, .cta {
 nav {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 30px 0 0;
+	margin-top: 50px;
 }
   
 .logo {
@@ -180,14 +173,13 @@ nav {
 }
   
 .logo img {
-	width: 40px;
-	margin: 0 10px 0 0;
+	width: 35px;
 }
 
 .navbar-icons {
 	display: flex;
 	align-items: center;
-	margin: 0 20px 0 0;
+	margin-right: 20px;
 }
   
 .navbar-icons li:nth-child(1),
@@ -201,7 +193,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
-	margin: 30px auto 0;
+	margin-top: 30px;
 	text-align: center;
 	/* border: thin solid whitesmoke; */
 }
@@ -224,7 +216,7 @@ nav {
 .feature-nav a:hover,
 .feature-nav a:focus,
 .feature-nav a.current {
-	color: #091a2b;
+	color: var(--hover);
 	background-color: whitesmoke;
 }
 
@@ -235,22 +227,15 @@ nav {
 	margin-right: 20px
 }
 
+
+/* --- Start Home --- */
+
 /* Hero - Think Graphically, Garth */
 .hero h1 {
-	font-size: 24px;
-	line-height: 40px;
 	color: whitesmoke;
+	text-align: center;
 	text-transform:uppercase;
-	margin: 50px 0;
-	padding-left: 28px;
-}
-
-.hero p {
-	font-size: 24px;
-	line-height: 40px;
-	color: whitesmoke;
-	margin: 50px 0;
-	padding-left: 28px;
+	padding: 50px;
 }
 
 .hero .fa-heart {
@@ -259,44 +244,32 @@ nav {
 	margin: 0 2vw 1.3vw 0;
 }
 
-
-/* --- Start Home --- */
-
-.feature-content.grid {
-	grid-gap: 20px;
-	margin-bottom: 50px;
-	border: 20px solid var(--secondary-color);
-	background-color: 20px solid var(--secondary-color);
+.feature-content {
+	padding: 50px 0;
 }
 
-.feature-content h2 {
-	text-align: center;
-}
-
-.feature-content p {
-	text-align: center;
-}
-
-.feature-content h2 {
-	margin-bottom: 50px;
-}
-
-.feature-content .article-1,
-.feature-content .article-2,
-.feature-content .article-3,
-.feature-content .article-4,
-.feature-content .article-5,
-.feature-content .article-6 {
+.feature-content article {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 50px 0;
 	background-color: rgba(245, 245, 245, 0.1);
-
 }
 
 .feature-content article:hover {
 	opacity: 20%;
+}
+
+.feature-content h2 {
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 30px;
+	background-color: var(--background-color);
+}
+
+.feature-content p {
+	text-align: center;
 }
 
 
@@ -365,6 +338,11 @@ form button {
 	background-color: var(--background-color);
   }
 
+  form button:hover, form button:focus {
+	color: var(--hover);
+	background-color: whitesmoke;
+  }
+
 form input:focus, form textarea:focus {
 	background: whitesmoke;
 	border-radius: 0;
@@ -400,14 +378,13 @@ form input:focus, form textarea:focus {
 
 	.navbar-icons li:nth-child(1),
 	.navbar-icons li:nth-child(2),
-	.navbar-icons li:nth-child(3),
-	.navbar-icons li:nth-child(4) {
+	.navbar-icons li:nth-child(3) {
 		display: block;
-		margin: 0 18px 0 0;
+		margin: 0 20px 0 0;
 	}
 
 	.hero h1 {
-		font-size: 6vw;
+		font-size: 6.5vw;
 		line-height: 8vw;
 	}
 }
