@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 :root {
-	--body-color: rgb(100, 100, 100);
+	--body-color: rgb(50, 50, 50);
 	--background-color:  rgba(245, 245, 245, 0.1);
-	--hover: rgba(0,0,0,.5);
+	--hover: rgba(0,0,0,.75);
+	--light-text: rgb(97, 210, 170);
   }
 
 *, *:before, *:after {
@@ -17,6 +18,7 @@ html {
 }
 
 body {
+	color: var(--light-text);
 	background-color: var(--body-color);
 }
 
@@ -54,22 +56,22 @@ h1 {
 	line-height: 1em;
 	text-transform:uppercase;
 	letter-spacing: 4px;
-	color: whitesmoke;
+	color: var(--light-text);
 
 }
 
 h2 {
 	font-family: 'Kosugi Maru', sans-serif;
 	font-size: 24px;
+	color: var(--light-text);
 	margin: 0 0 30px;
-	color: whitesmoke;
 }
 
 p {
 	font-family: 'Kosugi Maru', sans-serif;
 	font-size: 16px;
 	line-height: 1.75rem;
-	color: whitesmoke;
+	color: var(--light-text);
 }
 
 
@@ -134,7 +136,7 @@ img {
 	height: fit-content;
 	font-family: 'Kosugi Maru', sans-serif;
 	font-size: 1rem;
-	color: whitesmoke;
+	color: var(--light-text);
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 16px 0;
@@ -153,7 +155,7 @@ img {
 .button-200:focus {
   transition: .3s;
   color: var(--hover);
-  background-color: whitesmoke;
+  background-color: var(--light-text);
 }
 
 .button-200:active {
@@ -211,7 +213,7 @@ form {
 }
   
 fieldset {
-	color: whitesmoke;
+	color: var(--light-text);
 	margin: 0 0 30px;
 	width: 80%;
 }
@@ -235,7 +237,7 @@ input[type=text], textarea {
   }
 
 form input:focus, form textarea:focus {
-	background: whitesmoke;
+	background: var(--light-text);
 	border-radius: 0;
   }
 
@@ -255,7 +257,7 @@ nav {
 .logo a {
 	display: flex;
 	align-items: center;
-	color: whitesmoke;
+	color: var(--light-text);
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -295,16 +297,16 @@ nav {
 	letter-spacing: 2px;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: whitesmoke;
+	color: var(--light-text);
 	padding: 20px 0;
 	background-color: rgba(245, 245, 245, 0.1);
 }
 
 .feature-nav a:hover,
 .feature-nav a:focus,
-.feature-nav a.current {
+.feature-nav a.current-page {
 	color: var(--hover);
-	background-color: whitesmoke;
+	background-color: var(--light-text);
 }
 
 
@@ -323,9 +325,6 @@ nav {
 	font-size: 10.5vw;
 	line-height: 1em;
 	text-align: center;
-}
-
-.home .hero {
 	padding: 50px 0;
 }
 
@@ -392,7 +391,7 @@ footer .wrapper {
 		margin: 0 20px 0 0;
 	}
 
-	.hero h1 {
+	.home h1 {
 		font-size: 6.25vw;
 		line-height: 8vw;
 	}
@@ -407,7 +406,7 @@ footer .wrapper {
 @media (min-width: 768px) {
 
 	/* --- HERO --- */
-	.hero h1 {
+	.home h1 {
 		font-size: 46px;
 		line-height: 60px;
 	}
