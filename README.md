@@ -1,2 +1,2 @@
-# Responsive Web Design - Portfolio
-Final assignment for RWD2
+# www.graphicallygarth.com
+Think Graphically, Garth. | ©2020
