@@ -481,7 +481,7 @@ footer .wrapper {
 @media (min-width: 976px) {
 
 	/* --- BLOG ARTICLES GRID --- */
-	.home .cards.grid {
+	.home .cards.grid, .about .cards.grid{
 		grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
 	}
 
