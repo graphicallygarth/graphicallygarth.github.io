@@ -233,12 +233,6 @@ nav .fa-icon:hover, .logo:hover, footer .fa-icon:hover {
 
 /* --- CARDS --- */
 
-.cards {
-	text-align: center;
-	padding: 50px;
-	background-color: var(--background-color);
-}
-
 .card {
 	display: flex;
 	flex-direction: column;
@@ -316,11 +310,6 @@ form input:focus, form textarea:focus {
 
 /* --- LEARNING MODULES ---*/
 
-
-.modules {
-	padding: 50px;
-	background-color: var(--background-color);
-}
 
 .learning-module {
 	padding: 50px;
