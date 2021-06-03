@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+
+/* See Comments by Page Section */
+
+/* Home | About | Contact */
+
+/* Main Sets Page Widths and Base Font Sizes */
+
+/* Selectors Labeled for Minimal Specificity */
+
+/* Mobile First Layout */
+
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* 0 0 0 1 */
+body {
+	background-image: linear-gradient(#25362b 30%, #3f5c49 75%);
+}
+
+
+/* Start Navigation */
+
+/* 0 1 0 1 */
+nav#nav {
+	display: flex;
+	justify-content: center;
+	width: 95%;
+	margin: 0 auto;
+	padding: 50px 0;
+	border: none;
+	background-color: #25362b;
+}
+
+/* 0 0 2 1 */
+.nav a.nav-link {
+	flex-grow: 1;
+	margin: 0px 0;
+	padding: 0px 0px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	font-size: 1.8rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: orange;
+}
+
+/* 0 0 2 2 */
+.nav a.nav-link:hover {
+	color: #fff;
+}
+
+/* 0 0 2 2 */
+.nav a.nav-link:nth-child(1),
+.nav a.nav-link:nth-child(2) {
+	border-right: thin solid #f08902;
+}
+
+
+/* Start Main */
+
+/* 0 1 0 1 */
+main#main {
+	width: 95%;
+	margin: 0px auto;
+	padding: 0px;
+	border: 0px;
+	background-color: transparent;
+}
+
+/* 0 1 0 1 */
+#main section {
+	width: 95%;
+	margin: 0px auto;
+	padding: 0px;
+	background-color: transparent;
+}
+
+/* 0 0 1 1 */
+.main h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 125px;
+	font-weight: 400;
+	line-height: 125px;
+	color: orange;
+
+}
+
+/* 0 0 1 1 */
+.main h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
+	font-weight: 400;
+	line-height: 110px;
+	color: orange;
+
+}
+
+/* 0 0 1 1 */
+.main p {
+	font-family: 'Kosugi Maru', sans-serif;
+	text-align: left;
+	font-size: 1.25rem;
+	line-height: 3rem;
+	color: #3f5c49;
+	padding: 30px 30px;
+}
+
+
+/* Start Home */
+
+/* 0 1 0 1 */
+section#home {
+	background-color: transparent;
+}
+
+/* 0 0 1 1 */
+.home h1 {
+	text-align: left;
+	margin-left: 10px;
+}
+
+/* 0 0 1 1 */
+.home p {
+	width: 100%;
+	margin: -12px 0 -25px 0;
+	border-radius: 25px 25px 25px 25px;
+	background-color: orange;
+}
+
+
+/* Start About */
+
+/* 0 1 0 1 */
+section#about {
+	background-color: transparent;
+}
+
+/* 0 0 1 1 */
+.about h2 {
+	text-align: right;
+	margin: -34px 16px 0 0;
+	padding-right: 0px;
+	color: orange;
+}
+
+/* 0 0 1 1 */
+.about p:nth-child(3) {
+	border-radius: 25px 25px 0 0;
+	margin: -28px 0 0 0;
+	padding-bottom: 0;
+	background-image: linear-gradient(#ffb700 35%, #f08902 90%);
+}
+
+/* 0 0 1 1 */
+.about p:nth-child(4) {
+	border-radius: 0px 0px 25px 25px;
+	background-color: #f08902;
+}
+
+/* 0 0 1 1 */
+img.about-image {
+	display: none; /* Delete to Show Image */
+	width: 190px;
+	float: right;
+	margin: 0 24px 24px 10px;
+	border-radius: 25px;
+	border: 8px solid white;
+	background-color: #fff;
+}
+
+
+/* Start Contact */
+
+/* 0 1 0 1 */
+section#contact {
+	padding: 0;
+}
+
+/* 0 0 1 1 */
+.contact h2 {
+	text-align: left;
+	color: #f08902;
+	margin: -34px 0px 0 16px;
+}
+
+/* 0 0 1 1 */
+.contact p {
+	border-radius: 25px 25px 0 0;
+	margin: -28px 0 0 0;
+	padding-bottom: 0;
+	background-image: linear-gradient(#f08902 35%, orange 90%);
+}
+
+/* 0 0 1 1 */
+form.contact-form {
+	width: 100%;
+	margin: 0px auto;
+	padding: 1rem;
+	border-radius: 0 0 20px 20px;
+	background-color: orange;
+}
+
+/* 0 0 1 0 */
+.contact-form-section {
+	width: 90%;
+	margin: 12px auto 0px;
+}
+
+/* 0 0 0 2 */
+form label {
+	margin-left: 8px;
+	font-family: 'Kosugi Maru', sans-serif;
+	font-size: 1.3rem;
+	line-height: 2.4rem;
+	text-align: left;
+	color: #3f5c49;
+
+}
+
+/* 0 0 0 1 */
+input, textarea {
+	font-family: 'Kosugi Maru', sans-serif;
+	font-size: 1.3rem;
+	line-height: 1.75rem;
+	color: #3f5c49;
+	min-height: 3rem;
+	border-radius: 10px;
+	border: thin solid orange;
+	resize: vertical;
+}
+
+/* 0 0 0 1 */
+button {
+	display: block;
+	width: 200px;
+	margin: 40px auto;
+	font-family: 'Kosugi Maru', sans-serif;
+	font-weight: 200; 
+	font-size: 1.25rem;
+	color: white;
+	padding: .5rem;
+	border: solid thin #222;
+	border-radius: 6px;
+	background-color: #25362b;
+}
+
+/* 0 0 0 1 */
+footer {
+	width: 90%;
+	padding: 30px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* 0 0 0 2 */
+footer p {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+	font-size: 4vw;
+	color: orange;
+}
+
+footer p:nth-child(2) {
+	font-size: 3.5vw;
+	}
+
+
+/* Start Small Screen Adjustments */
+
+@media (min-width: 735px) {
+
+
+	/* Start Main */
+
+	/* 0 0 1 1 */
+	.main p {
+		font-size: 1.75rem;
+		line-height: 3rem;
+	}
+
+	/* 0 1 0 1 */
+	main#main {
+		width: 90%;
+	}
+
+	/* 0 1 0 1 */
+	#main section {
+		width: 90%;
+	}
+
+	/* Start Contact */
+
+	/* 0 0 1 0 */
+	.contact-form-section {
+		width: 100%;
+	}
+
+	form label {
+		font-size: 1.75rem;
+		line-height: 3rem;
+	}
+
+	/* 0 0 1 1 */
+	form.contact-form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10px;
+		padding: 1rem 50px;
+	}
+
+	/* 0 0 2 1 */
+	.contact-form .contact-form-section:nth-child(3) {
+		grid-column: 1/3;
+	}
+
+	/* 0 0 1 1 */
+	textarea.contact-form-input {
+		justify-content: stretch;
+	}
+
+	/* 0 0 0 1 */
+	button {
+		grid-column: 1/span 2;
+  }
+
+  	/* 0 0 0 2 */
+	footer p {
+		font-size: 3.5vw;
+	}
+
+	/* 0 0 0 3 */
+	footer p:nth-child(2) {
+		font-size: 2.5vw;
+	}
+}
+
+
+/* Start Large Screen Adjustments */
+
+@media (min-width: 1200px) {
+
+
+	/* Start Navigation */
+
+	/* 0 1 0 1 */
+	nav#nav {
+		width: 85%;
+		max-width: 1400px;
+	}
+
+	/* Start Main */
+
+	/* 0 1 0 1 */
+	main#main {
+		width: 85%;
+		max-width: 1400px;
+	}
+
+	/* 0 1 0 1 */
+	#main section {
+		width: 85%;
+		max-width: 1400px;
+	}
+
+	/* Start Contact */
+
+  	/* 0 0 0 2 */
+	footer p {
+		font-size: max(40px);
+	}
+
+	/* 0 0 0 3 */
+	footer p:nth-child(2) {
+		font-size: max(30px);
+	}
+
+}

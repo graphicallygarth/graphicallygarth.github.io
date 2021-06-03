@@ -1,0 +1,13 @@
+body {
+    background-color: #336699;
+}
+
+p {
+    background-color: var(--green);
+    max-width: 800px;
+}
+
+a {
+    background-color: var(--dark);
+    color: var(--light);
+}
