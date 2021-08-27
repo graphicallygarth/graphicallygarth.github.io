@@ -1,0 +1,635 @@
+@import url('https://use.typekit.net/dly5hft.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary-black: #350101;
+  --secondary-color: #3d0404;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+  background-color: var(--primary-black);
+}
+
+#container {
+  background-color: var(--primary-black);
+}
+
+.category-grid {
+  display: grid;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 6.5vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5vw;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+
+/* Header & Navigation Styles */
+
+.navbar-icons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 20px;
+	background-color: var(--primary-black);
+}
+
+.navbar-icons a {
+color: whitesmoke;
+}
+
+
+
+.navbar-icons li:nth-child(2),
+.navbar-icons li:nth-child(3),
+.navbar-icons li:nth-child(4) {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.navbar-icons li:nth-child(2),
+	.navbar-icons li:nth-child(3),
+	.navbar-icons li:nth-child(4) {
+		display: block;
+		width: 180px;
+		padding: 10px;
+		color: white;
+		background-color: rgb(238, 42, 123, .1);
+	}
+}
+
+.navbar-icons li:nth-child(2),
+.navbar-icons li:nth-child(4) {
+	margin: 0 20px;
+}
+
+.navbar-icons li:nth-child(1) {
+	margin-right: auto;
+}
+
+.fa-icon-menu img {
+	width: 34px;
+}
+  
+.fa-icon-menu:hover {
+	transform: scale(1.2);
+	transition: .3s ease;
+}
+
+
+/* Home Styles */
+
+.home .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+	width: 100%;
+	min-height: calc(100vh - 140px);
+	position: relative;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.167) 10%, rgba(40, 40, 40, 0.2)), url("../img/shish-kebab_1920.jpg");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.home .hero h1 {
+  font-family: roboto;
+  font-size: 4vw;
+	font-weight: 300;
+	text-transform: lowercase;
+	text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 3.5vw 6.5vw;
+}
+
+@media (min-width: 768px) {
+	.home .hero h1 {
+		font-size: 30px;
+		padding: 30px 50px; 
+		background-color: var(--primary-black);
+	}
+}
+
+.home .category-grid {
+    grid-template-columns: repeat(2, 50%);
+		gap: 10px;
+  }
+
+.home figure {
+  position: relative;
+}
+
+.home figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 8%;
+}
+
+.home figcaption h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5vw;
+  color: white;
+  padding: .5rem;
+  background-color: var(--primary-black);
+}
+
+.home .feature-article article {
+  padding: 8% 8% 12%;
+}
+
+.home .feature-article {
+  margin: 5% 0;
+  background-color: var(--primary-black);
+}
+
+.home .feature-article h2 {
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.home .feature-article p {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+
+/* About Styles */
+
+table {
+  width: 100%;
+}
+
+.about table {
+  margin: 6% 0;
+}
+
+td:nth-child(2){
+  text-align: right;
+  padding-right: 15%;
+}
+
+td:nth-child(1){
+  text-align: left;
+  padding: 0 15%;
+}
+
+tr:nth-child(even) {
+  background-color: var(--primary-black);
+}
+
+.about .hours-of-operation {
+  margin: 5% 0;
+  background-color: var(--primary-black);
+}
+
+.about .hours-of-operation article {
+  margin: 0;
+  padding: 0 8%;
+}
+
+.about .hours-of-operation h2 {
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.about .hours-of-operation p {
+  font-size: 1.3rem;
+  text-align: left;
+  padding-bottom: 12%;
+}
+
+.about table td {
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+}
+
+
+/* Contact Styles */
+
+form {
+  text-align: left;
+  height: 100%;
+  font-size: 1.2rem;
+  margin: 5% 0;
+  padding: 3rem 1.5rem 1rem;
+  background-color: var(--primary-black);
+}
+
+fieldset {
+  color: white;
+  margin: 0 0 1rem;
+  padding: 1rem 1.5rem;
+  border: solid 1px var(--primary-black);
+  border-radius: 10px;
+  background-color: var(--primary-black);
+}
+
+input[type=text], textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+fieldset:nth-child(4) {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: charcuterie-cursive;
+  }
+
+#name, #email, #message {
+  font-size: 1rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  border: solid .5px var(--primary-black);
+  border-radius: 8px;
+}
+
+button {
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border: solid 1px #fff;
+  border-radius: 8px;
+  background-color: var(--primary-black);
+  width: 100%;
+}
+
+.googlemap {
+  margin-top: 10%;
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.googlemap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Start Desktop Breakpoints */
+
+@media (min-width: 768px) {
+
+	.home figcaption h2 {
+    font-size: 3vw;
+  }
+
+  .home .category-grid {
+    grid-template-columns: repeat(3, 33.3333%);
+  }
+
+  .home .feature-article article {
+    padding: 3% 8% 6%;
+  }
+
+  .home .feature-article {
+    margin: 5% 0;
+    background-color: var(--secondary-color);
+  }
+
+  .home .feature-article h2,
+  .about .hours-of-operation h2 {
+    padding-bottom: 2%;
+  }
+
+  .about {
+    margin: 3% 0;
+  }
+
+  .about .category-grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .about table,
+  .about .hours-of-operation article {
+    margin: 5% 0% 5% 0%;
+  }
+
+  .about table td {
+  font-size: 1.5rem;
+  }
+
+  .about td:nth-child(2){
+    text-align: right;
+    padding-right: 8%;
+  }
+
+  .about td:nth-child(1){
+    text-align: left;
+    padding-left: 13%;
+    padding-right: 0;
+  }
+
+  .googlemap {
+    padding: 20% 0;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 5% 0;
+    font-size: 1.2rem;
+    padding: 5%;
+  }
+  
+  fieldset {
+    margin: 0 0 0;
+    padding: 1rem 1.5rem 0;
+  }
+  
+  fieldset:nth-child(3) {
+    grid-column: 1/3;
+  }
+  
+  fieldset:nth-child(4) {
+    grid-column: 1/3;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  button {
+    grid-column: 1 / span 2;
+    margin: 2rem auto 0;
+    width: 40%;
+    padding: 0;
+  }
+
+}
+
+/* 1024px Breakpoint */
+
+@media (min-width: 1024px) {
+
+	.home .category-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+	.home figcaption h2 {
+    font-size: 1.8vw;
+  }
+
+  .about table td {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+
+  .about td:nth-child(2){
+    text-align: right;
+    padding-right: 10%;
+  }
+
+  .about td:nth-child(1){
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 0;
+  }
+
+  .home .feature-article p,
+  .about .hours-of-operation p {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+
+  form {
+    font-size: 1.2rem;
+    padding: 4rem 5rem 5.5rem;
+  }
+}
+
+
+/* 1920px Breakpoint */
+
+@media (min-width: 1280px) {
+
+  #container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  .home .feature-article p,
+  .about .hours-of-operation p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  .about table td {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+
+  .about td:nth-child(2) {
+    text-align: right;
+    padding-right: 15%;
+  }
+
+  .about td:nth-child(1) {
+    text-align: left;
+    padding-left: 16%;
+    padding-right: 0;
+  }
+}
+
+
+/* Weightloss Wagon Footer Component */
+
+footer .shipping-terms {
+  background-color: var(--primary-black);
+}
+
+footer .shipping-terms ul {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0 90px;
+}
+
+.footer-terms .button a:link,
+.footer-terms .button a:visited {
+  width: 230px;
+  margin-top: 20px;
+}
+
+.button a:link,
+.button a:visited {
+  display: block;
+  padding: 10px 40px;
+  border: solid whitesmoke 1px;
+  text-align: center;
+  color: white;
+}
+
+.button a:hover {
+  transition: .3s;
+  color: var(--primary-black);
+  background-color: whitesmoke;
+}
+
+.footer-terms .logo {
+  width: 115px;
+  margin-bottom: 20px;
+}
+
+.primary-footer {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 50px 0 20px;
+  border-top: 6px solid whitesmoke;
+}
+
+.footer-text-links li {
+	width: 120px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.footer-text-links li a:link,
+.footer-text-links li a:visited {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	color: white;
+	background-color: rgba(255,255,255,.1);
+}
+
+.footer-text-links li a:hover {
+	background-color: rgba(255,255,255,.1);
+	transition: .3s;
+}
+
+.footer-social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 20px;
+}
+
+.footer-social-icons li:nth-child(2) {
+	margin: 0 20px;
+}
+
+.footer-social-icons img {
+  width: 40px;
+}
+
+.footer-social-icons li {
+  margin: 20px 0;
+}
+
+.footer-social-icons li:hover {
+  transform: scale(1.1);
+  transition: all .25s ease-out 0.1s;
+}
+
+.copyright p {
+	font-size: 1.1rem;
+	text-align: center;
+	color: white;
+	padding-bottom: 60px;
+}
+
+/* Start Footer Component Breakpoints */
+
+@media (min-width: 768px) {
+
+	footer .shipping-terms {
+		display: flex;
+		justify-content: center;
+	}
+
+	footer .shipping-terms ul {
+		justify-content: center;
+    flex-direction: row;
+    padding: 40px 0 50px;
+  }
+
+  .footer-terms .logo {
+		width: 120px;
+    margin: 10px 50px 0;
+  }
+
+  .footer-terms li:nth-child(1) {
+    order: 2;
+  }
+
+  .footer-terms li:nth-child(2) {
+    order: 1;
+  }
+
+  .footer-terms li:nth-child(3) {
+    order: 3;
+  }
+
+  .primary-footer {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .footer-text-links {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    order: 2;
+    padding: 60px 0 0;
+    order: 1;
+  }
+
+  .footer-text-links li {
+  	width: 150px;
+  	text-align: center;
+  	margin: 10px 10px 0;
+  }
+
+  .footer-social-icons {
+    padding: 20px 0 20px;
+    margin: 0;
+  }
+}
+

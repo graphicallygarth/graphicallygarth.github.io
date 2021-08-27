@@ -118,6 +118,12 @@ p {
   transition: all .3s ease-out 0.1s;
 }
 
+.hidden-text-link {
+	visibility: hidden;
+	position: absolute;
+	left: -100vw;
+}
+
 
 /* Start Header */
 
@@ -236,13 +242,32 @@ nav {
 .home .feature-category {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
+  gap: 10px;
   margin: 10px;
 }
 
 .home .feature-category img {
   width: 100%;
   height: auto;
+}
+
+/* .home figure {
+  position: relative;
+}
+
+.home figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} */
+
+.home figcaption h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: white;
+  padding: .5rem 1rem .5rem;
+  background-color: var(--primary-yellow);
 }
 
 .home .feature-article {
@@ -292,7 +317,7 @@ footer .shipping-terms {
   text-align: center;
   padding: 50px 0 20px;
   border-top: 6px solid white;
-  background-color: var(--primary-yellow);
+  background-color: var(--primary-black);
 }
 
 .footer-text-links li {
@@ -311,8 +336,8 @@ footer .shipping-terms {
 }
 
 .footer-text-links li a:hover {
-	color: var(--primary-black);
-	background-color: white;
+	color: white;
+	background-color: var(--primary-blue);
 	transition: .3s;
 }
 
@@ -344,7 +369,7 @@ footer .shipping-terms {
 	font-size: 1.1rem;
 	text-align: center;
 	color: white;
-	background-color: var(--primary-yellow);
+	background-color: var(--primary-black);
 	padding-bottom: 60px;
 }
 

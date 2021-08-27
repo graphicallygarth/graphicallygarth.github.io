@@ -18,24 +18,38 @@
 			<!-- start header -->
 			<header class="top-nav">
 				<nav>
+					
 					<ul class="secondary-nav">
 						<li><a href="index.html"><img class="logo" src="img/weight-loss-wagon-logo.svg" alt="Weight Loss Wagon Logo"></a></li>
 						<li class="button"><a href="#"><span class="fa fa-sign-in"></span> Sign-up</a></li>
 					</ul>
-					<div class="primary-nav-bar">
+					
+					<div class="primary-nav-bar">	
 						<ul class="primary-nav">
-							<li><a class="current-page" href="index.html"><span class="fa fa-home"></span></a></li>
+							<li>
+								<a href="index.html" aria-label="home">
+									<span class="fa fa-home" aria-hidden="true"></span>
+									<span class="hidden-text-link">Home</span>
+								</a>
+							</li>
 							<li><a href="#">Protein Bars</a></li>
 							<li><a href="#">Instant Meals</a></li>
 							<li><a href="#">Crispy Snacks</a></li>
-							<li><a href="#"><span class="fa fa-shopping-cart"></span></a></li>
+							<li>
+								<a href="#" aria-label="shop">
+									<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									<span class="hidden-text-link">Shop</span>
+								</a>
+							</li>
 						</ul>	
 					</div>
+
 					<ul class="feature-nav">
 						<li><a href="plans.html">PLANS</a></li>
 						<li><a href="store.html">SHOP</a></li>
 						<li><a href="blog.html">BLOG</a></li>
 					</ul>
+
 				</nav>
 			</header>
 
@@ -57,10 +71,37 @@
 					</article>
 				</div>
 				<div class="feature-category">
-					<img src="img/protein-shake.jpg" alt="Protein Shake">
-					<img src="img/weight-loss-groups.jpg" alt="Weight Loss Groups">
-					<img src="img/weight-loss-programs.jpg" alt="Weight Loss Programs">
-					<img src="img/weight-loss-trends.jpg" alt="Weight Loss Trends">
+					<figure>
+						<picture>
+							<source srcset="img/protein-shake.jpg" media="(min-width: 768px)">
+							<img src="img/protein-shake.jpg" alt="Protein Shakes">
+						</picture>
+						<figcaption><h2>Protein Shakes</h2></figcaption>
+					</figure>
+
+					<figure>
+						<picture>
+							<source srcset="img/weight-loss-groups.jpg" media="(min-width: 768px)">
+							<img src="img/weight-loss-groups.jpg" alt="Weightloss Groups">
+						</picture>
+						<figcaption><h2>Weightloss Groups</h2></figcaption>
+					</figure>
+
+					<figure>
+						<picture>
+							<source srcset="img/weight-loss-programs.jpg" media="(min-width: 768px)">
+							<img src="img/weight-loss-programs.jpg" alt="Weightloss Programs">
+						</picture>
+						<figcaption><h2>Weightloss Programs</h2></figcaption>
+					</figure>
+
+					<figure>
+						<picture>
+							<source srcset="img/weight-loss-trends.jpg" media="(min-width: 768px)">
+							<img src="img/weight-loss-trends.jpg" alt="Weightloss Trends">
+						</picture>
+						<figcaption><h2>Weightloss Trends</h2></figcaption>
+					</figure>
 				</div>
 				<div class="fitness-icons">
 					<img src="img/fitness-icon-1.svg" alt="fintness Icon Standing">
