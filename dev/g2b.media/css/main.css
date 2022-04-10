@@ -14,7 +14,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 18px;
   overflow: hidden;
 }
 
@@ -37,6 +37,100 @@ body {
   background-size: cover;
 }
 
+/* Form */
+
+/* Mobile View Start */
+
+form {
+  margin: 0 0 80px;
+  padding: 1rem;
+  border: solid 1px #555;
+  border-radius: 10px;
+  background-color: rgba(136, 136, 136, 0.25);
+}
+
+fieldset {
+  color: white;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: solid .75px #222;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+input[type=text], textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+
+#name, #email, #message {
+  margin-top: .5rem;
+  padding: .5rem;
+  border: solid 2px #336699;
+  border-radius: 8px;
+}
+
+#message {
+	min-height: 120px;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+	font-size: 1rem;
+  color: white;
+  padding: .75rem;
+	margin-top: 20px;
+  border: solid .75px #222;
+  border-radius: 6px;
+  background-color: #333;
+  width: 100%;
+}
+
+button:hover {
+	font-weight: 400;
+  background-color: white;
+  color: #333;
+	text-decoration: underline;
+}
+
+
+/* Tablet View Start */
+
+@media (min-width: 35rem) {
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+
+  }
+  
+  fieldset {
+    margin: 0;
+  }
+  
+  fieldset:nth-child(3) {
+    grid-column: 1/3;
+  }
+  
+  fieldset:nth-child(4) {
+    grid-column: 1/3;
+  }
+
+  button {
+    grid-column: 1 / span 2;
+    justify-self: start;
+    margin: 20px auto 0;
+
+  }
+
+}
+
+
+  
+
 
 /* Start Header */
 
@@ -44,10 +138,14 @@ body {
 header {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: auto 0;
+}
 
+nav {
+	padding-top: 50px;
 }
 
 /* nav flex item */
@@ -79,23 +177,24 @@ header {
 
 .hero a {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   align-self: center;
-  padding: 14px 34px;
+  padding: 1rem 34px;
 	font-family: inherit;
 } 
 
 .hero a:link,
 .hero a:visited {
-  background-color: rgb(172, 42, 42);
+  background-color: #333;
   color: white;
-  border-radius: 2px;
+  border-radius: 6px;
 }
 
 .hero a:hover {
 	font-weight: 400;
   background-color: white;
-  color: rgb(172, 42, 42);
+  color: #333;
+	text-decoration: underline;
 }
 
 .fa-arrow-right {
@@ -132,5 +231,6 @@ footer a:hover {
   .hero h2 {
       font-size: 60px;
   }
+
 }
 
