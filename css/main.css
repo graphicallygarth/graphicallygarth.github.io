@@ -109,19 +109,19 @@ min-height: 100vh;
   /* background-color: green; */
 }
 
-.hero h1 {
+.hero h1, h3 {
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
-  font-weight: 100;
+  font-weight:100;
   color: white;
   opacity: 90%;
 }
 
 .hero h2 {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 11vw;
   line-height: 80%;
-  font-weight: 100;
+  font-weight: 500;
   color: whitesmoke;
   text-transform: uppercase;
   padding: 30px;
@@ -147,6 +147,13 @@ min-height: 100vh;
 .hero a:hover {
   background-color: white;
   color: var(--primary-black);
+}
+
+strong {
+	text-transform: lowercase;
+	font-size: 2.5rem;
+	font-family: 'Roboto';
+	font-weight: 100;
 }
 
 @media (orientation: landscape) {
