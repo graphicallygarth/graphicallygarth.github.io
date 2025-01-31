@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Red Silicon</title>
+  <meta name="description" content="description">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/3df718edbf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">
+        <a href="index.html"><img src="img/home-icon.svg" alt="Graphically Garth logo"></a>
+      </div>
+
+      <ul class="navbar-icons">
+        <li class="fa-icon"><a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a></li>
+        <li class="fa-icon"><a href="#"><img src="img/instagram.svg" alt="Instagram photos"></a></li>
+        <li class="fa-icon"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="img/menu.svg" alt="Menu"></a></li>
+      </ul>
+
+      <ul id="myLinks" class="hidden">
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <ul class="primary-nav">
+        <li><a href="technical-skills.html">Skillset</a></li>
+        <li><a href="design-work.html">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Brand Management</h1>
+    </div>
+  </header>
+
+  <main class="container home">
+    <div class="wrapper">
+      <article class="flex-box-800">
+        <h2><strong>Goals and Objective</strong></h2>
+        <p>
+          <!-- Content goes here -->
+        </p>
+      </article>
+
+      <article>
+        <form>
+          <fieldset>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+          </fieldset>
+
+          <fieldset>
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </fieldset>
+
+          <button class="button-200" type="submit">Submit</button>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

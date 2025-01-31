@@ -81,7 +81,7 @@ p {
   background-color: white;
 }
 
-.fitness-icons {
+.icons {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -89,7 +89,7 @@ p {
 	background-color: white;
 }
 
-.fitness-icons img {
+.icons img {
   height: 50px;
 }
 
@@ -144,21 +144,30 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin: 0 30px;
+  margin: 0;
   padding: 12px 0px 10px 0px;
 }
 
 .main-links {
   display: flex;
   justify-content: flex-end;
+  padding: 0;
+}
+
+.fa-icon {
+  display: none;
 }
 
 .main-links li {
-  padding: 10px;
+  padding: 0 10px;
+}
+
+.main-links li:last-child {
+  border: 5px solid red;
 }
 .main-links .button a:link,
 .main-links .button a:visited {
-  width: 230px;
+  width: 100%;
 }
 
 /* .primary-nav {

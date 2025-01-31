@@ -105,21 +105,24 @@ min-height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   height: 100vh;
-  /* background-color: green; */
+  background-color: blue;
+  margin: 50px;
 }
 
 .hero h1 {
   font-family: 'Exo 2', sans-serif;
-  font-size: 20px;
+  font-size: 36px;
   font-weight:100;
   color: white;
   opacity: 90%;
+  margin: 0 0 40px;
 }
 
 .hero h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 6vw;
+  font-size: 48px;
   font-weight: 200;
   color: whitesmoke;
   padding: 30px;
@@ -135,17 +138,28 @@ min-height: 100vh;
   opacity: 90%;
 }
 
+.hero p {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 26px;
+  font-weight:100;
+  line-height: 2rem;
+  color: white;
+  opacity: 90%;
+  margin: 0 0 40px;
+}
+
 .hero a {
-  font-size: 1.2rem;
+  width: fit-content;
+  font-size: 1.1rem;
   align-self: center;
-  padding: 12px 25px;
-  margin: 2vh 0 4vh 0;
-  border-radius: 10px;
+  padding: 14px 45px;
+  margin: 12px;
 } 
 
 .hero a:link,
 .hero a:visited {
-  background-color: rgb(0, 0, 0);
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
 
