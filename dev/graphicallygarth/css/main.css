@@ -38,26 +38,28 @@ body {
 
 nav {
 display: flex;
-justify-content: center; /* Centers Column Content Vertically */
-align-items: end;
+flex-direction: column;
+justify-content: space-between; /* Centers Column Content Vertically */
+align-items: center;
 min-height: 100vh;
-padding: 20px 0 0 0;
+padding: 10px;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  padding: 45px;
+  max-width: 740px;
+  padding: 0px 45px 45px 45px;
 
 }
 
 article.hero {
-  padding:  0 0 0 0;
-  margin: 100px 0 200px 0;
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  padding: 10px 0px 0vh 0px;
 }
 
 .logo {
@@ -112,7 +114,6 @@ article.hero {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 0 40px 0;
 }
 
 .hero h1 {
@@ -130,7 +131,7 @@ article.hero {
   font-weight: 100;
   color: whitesmoke;
   text-transform: uppercase;
-  padding: 30px 50px;
+  padding: 30px 0px;
   text-align: center;
 
 }
@@ -171,15 +172,14 @@ article.hero {
 }
 
 @media (min-width: 760px){
+  
 
-  /* .hero h2 {
-      font-size: 36px;
-  } */
 }
 
 @media (min-width: 1024px){
 
   .hero h2 {
       font-size: 56px;
+  }
   }
 }
