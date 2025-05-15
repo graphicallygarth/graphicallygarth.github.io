@@ -39,18 +39,27 @@ body {
 nav {
 display: flex;
 flex-direction: column;
-justify-content: center; /* Centers Column Content Vertically */
+justify-content: space-between; /* Centers Column Content Vertically */
+align-items: center;
 min-height: 100vh;
+padding: 10px;
 }
 
 .navbar {
   display: flex;
+  justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
   width: 100%;
-  padding: 45px;
-  z-index: 1;
+  max-width: 740px;
+  padding: 0px 45px 45px 45px;
+
+}
+
+article.hero {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  padding: 10px 0px 0vh 0px;
 }
 
 .logo {
@@ -87,7 +96,7 @@ min-height: 100vh;
 .social-icons li:nth-child(2),
 .social-icons li:nth-child(3),
 .social-icons li:nth-child(4) {
-  display: none;
+  /* display: none; */
 }
 
 .social-icon img {
@@ -105,62 +114,49 @@ min-height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
-  height: 100vh;
-  background-color: blue;
-  margin: 50px;
 }
 
 .hero h1 {
   font-family: 'Exo 2', sans-serif;
-  font-size: 36px;
-  font-weight:100;
+  font-size: 20px;
+  font-weight: 100;
   color: white;
   opacity: 90%;
-  margin: 0 0 40px;
 }
 
 .hero h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 48px;
-  font-weight: 200;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 6vw;
+  line-height: 80%;
+  font-weight: 100;
   color: whitesmoke;
-  padding: 30px;
+  text-transform: uppercase;
+  padding: 30px 0px;
   text-align: center;
 
 }
 
-.hero h3 {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 19px;
-  font-weight:100;
-  color: white;
-  opacity: 90%;
-}
-
 .hero p {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 26px;
-  font-weight:100;
-  line-height: 2rem;
+	font-family: 'Exo 2', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
   color: white;
   opacity: 90%;
-  margin: 0 0 40px;
 }
 
 .hero a {
-  width: fit-content;
-  font-size: 1.1rem;
+  display: inline-block;
+  font-size: 1.2rem;
   align-self: center;
-  padding: 14px 45px;
-  margin: 12px;
+  padding: 12px 25px;
+  margin: 2vh 0 4vh 0;
 } 
 
 .hero a:link,
 .hero a:visited {
-  font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: red;
   color: white;
+  border-radius: 2px;
 }
 
 .hero a:hover {
@@ -168,23 +164,22 @@ min-height: 100vh;
   color: var(--primary-black);
 }
 
-strong {
-	text-transform: lowercase;
-	font-size: 2.5rem;
-	font-family: 'Roboto';
-	font-weight: 100;
-}
-
 @media (orientation: landscape) {
 
-  /* .hero h2 {
+  .hero h2 {
     font-size: 6vw;
   }
-} */
+}
+
+@media (min-width: 760px){
+  
+
+}
 
 @media (min-width: 1024px){
 
   .hero h2 {
-      font-size: 60px;
+      font-size: 56px;
+  }
   }
 }
