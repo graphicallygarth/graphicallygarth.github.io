@@ -46,11 +46,11 @@ nav {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  min-width: 740px;
-  padding: 0px 145px 30vh 145px;
+  max-width: 300px;
+  padding: 0px 145px 30vh 145px;  
 
 }
 
@@ -171,6 +171,15 @@ article.hero {
 
 @media (min-width: 760px) {
   /* Add styles for medium screens here */
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 740px;
+  padding: 0px 145px 30vh 145px;
+
+}
 }
 
 @media (min-width: 1024px) {
