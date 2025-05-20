@@ -49,13 +49,15 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0px 145px 30vh 145px;  
+  padding: 50px 145px 20vh 145px;
 
 }
 
 article.hero {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height:70vh;
 }
 
 .logo {
