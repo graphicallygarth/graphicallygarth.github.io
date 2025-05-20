@@ -26,6 +26,7 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .wrapper {
@@ -35,27 +36,27 @@ body {
 /* Start Header */
 
 nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Centers Column Content Vertically */
-  align-items: center;
-  padding: 10px;
-  margin: 0px 0px 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 10px;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 740px;
-  padding: 0px 45px 45px 45px;
+  min-width: 740px;
+  padding: 0px 145px 30vh 145px;
+
 }
 
 article.hero {
   display: flex;
   align-items: center;
-  height: 80vh;
 }
 
 .logo {
