@@ -60,6 +60,7 @@ article.hero {
   align-items: center;
   /* height: 80vh; */
   padding: 10px 0px 0vh 0px;
+  background-color: green;
 }
 
 .logo {
