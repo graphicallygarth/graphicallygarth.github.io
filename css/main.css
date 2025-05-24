@@ -36,12 +36,11 @@ body {
 /* Start Header */
 
 nav {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    padding: 10px;
-    height: 100vh;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding: 10px;
+  height: 100vh;
 }
 
 .navbar {
@@ -50,14 +49,13 @@ nav {
   align-items: center;
   width: 100%;
   padding: 50px 145px 20vh 145px;
-
 }
 
 article.hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:70vh;
+  height: 70vh;
 }
 
 .logo {
@@ -84,11 +82,14 @@ article.hero {
 .social-icons {
   display: flex;
   align-items: center;
-
 }
 
 .social-icons li {
   margin-left: 20px;
+}
+
+.social-icons li:nth-child(1) {
+  margin-left: 0px;
 }
 
 /* .social-icons li:nth-child(1),
@@ -126,7 +127,7 @@ article.hero {
 
 .hero h2 {
   font-family: 'Exo 2', sans-serif;
-  font-size: 6vw;
+  font-size: 10vw;
   line-height: 80%;
   font-weight: 100;
   color: whitesmoke;
@@ -158,33 +159,23 @@ article.hero {
   border-radius: 2px;
 }
 
-/* Uncomment this rule if hover styling is needed for hero links */
 .hero a:hover {
   background-color: white;
   color: var(--primary-black);
 }
 
 @media (orientation: landscape) {
-  .hero h2 {
+  /* .hero h2 {
     font-size: 6vw;
+  } */
+}
+
+@media (min-width: 640px) {
+  .hero h2 {
+    font-size: 64px;
   }
-}
-
-@media (min-width: 760px) {
-  /* Add styles for medium screens here */
-  .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-width: 740px;
-  padding: 0px 145px 30vh 145px;
-
-}
 }
 
 @media (min-width: 1024px) {
-  .hero h2 {
-    font-size: 56px;
-  }
+  /* Add styles for large screens here if needed */
 }
