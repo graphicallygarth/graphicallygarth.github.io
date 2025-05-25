@@ -1,140 +1,60 @@
 /* Import Google Fonts Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('reset.css'); /* Import reset.css */
+@import url('reset.css');
 
+/* Base styles */
 html, body {
     height: 100%;
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #af0000;
-    color: #333;
+    background-color: #b00000;
 }
 
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px; /* Ensure the container has a fixed width of 400px */
-    margin-bottom: 200px; /* Ensure the container has a 300px margin at the bottom */
-}
-
-.input-area, .chat-container {
-    width: 100%;
-    max-width: 500px;
-}
-
-.chat-container {
-    background: transparent;
-    color: #000; /* Set font color */
-    box-shadow: none; /* Remove shadow */
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center; /* Center the answer text */
-}
-
-.chat-container div {
-    width: 100%; /* Ensure the answer fits into 100% width */
-    word-wrap: break-word; /* Wrap the text if needed */
-}
-
-.video-container {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    background-color: #007bff;
-}
-
-video {
-    width: 100%;
-    height: auto;
-}
-
-.input-area {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-area input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    width: 100%;
-    height: 100px; /* Ensure the question text box has a height of 100px */
-}
-
-.input-area input::placeholder {
-    font-size: 20px; /* Match the question font size */
-    text-align: center; /* Center the placeholder text */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ask-now {
-    display: flex;
-    flex-direction: column;
-}
-
+.input-area input,
 #ask-now {
-    flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 30px;
     width: 100%;
-    height: 100px; /* Ensure the question text box has a height of 100px */
-    text-align: center; /* Center the cursor */
+    height: 100px;
+    text-align: center;
 }
 
+.input-area input::placeholder,
 #ask-now::placeholder {
-    font-size: 20px; /* Match the question font size */
-    text-align: center; /* Center the placeholder text */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Ensure the placeholder text is centered */
+    font-size: 20px;
 }
 
-#ask-now:focus::placeholder {
-    color: transparent; /* Hide the placeholder text when focused */
-}
-
-button {
+button,
+.button-container button {
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
-    font-size: 20px; /* Increased font size by 10px */
+    font-size: 20px;
     transition: background-color 0.3s ease;
+    flex: 1;
+    width: 50%;
+    flex-basis: 0;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-#ask-now-button, #voice-control-button {
-    /* Ensure equal space and full width */
-    flex: 1;
-}
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 60px;
-    color: black;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #444;
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
 }
 
 a {
@@ -146,36 +66,13 @@ a:hover {
     text-decoration: underline;
 }
 
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-}
-
-.button-container button {
-    flex-grow: 1;
-    width: 50%; /* Ensure buttons are exactly the same width */
-    flex-basis: 0; /* Ensure buttons are always of equal width */
-}
-
-
 .logo {
-    width: 340px;
-    padding: 100px 0 30px 0;
-    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 50px 0;
 }
 
 @media (max-width: 600px) {
-    .chat-container, .video-container {
-        padding: 10px;
-    }
 
-    .input-area input {
-        padding: 8px;
-    }
-
-    button {
-        padding: 8px 10px;
-    }
 }
