@@ -2,36 +2,63 @@
 <html lang="en">
 
 <head>
-	<title>UX Designer + Developer</title>
-	<meta name="description" content="In modern UX Design there's no boundary between form and function; ideas get analyzed, ux design problems merge with design thinking, and graphic elements flow seemlessly into progressive usability features – from initial concept to product launch, it's about creating a great user experience.">
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/3df718edbf.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css">
+    <title>UX Designer + Developer</title>
+    <!-- SEO: Add meta author for clarity -->
+    <meta name="author" content="Garth Fenton">
+    <!-- SEO: Add meta keywords (optional, not critical for modern SEO but sometimes useful) -->
+    <meta name="keywords" content="UX Design, UI Design, Interactive Media, Portfolio, Garth Fenton, Web Developer, Graphic Design">
+    <meta name="description" content="In modern UX Design there's no boundary between form and function; ideas get analyzed, ux design problems merge with design thinking, and graphic elements flow seemlessly into progressive usability features – from initial concept to product launch, it's about creating a great user experience.">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3df718edbf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- SEO: Add structured data for organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Garth Fenton",
+      "url": "https://graphicallygarth.github.io",
+      "sameAs": [
+        "https://facebook.com/yourprofile",
+        "https://instagram.com/yourprofile"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <div class="home wrapper">
+    <div class="home">
 
         <!-- start header -->
         <header>
-            <nav>
-                <article class="hero">
-                    <h1>Interactive Media</h1>
-                    <h2>Portfolio</h2>
-                    <h3>designs by garth fenton</h3>
-                    <a href="#" target="_blank"><span class="play-icon"></span>Demo Reel</a>
-                </article>
-                <ul class="social-icons">
-                    <li class="social-icon"><a href="#"><img src="img/facebook.svg" alt="Photography"></a></li>
-                    <li class="social-icon"><a href="#"><img src="img/instagram.svg" alt="Portfolio"></a></li>
-                    <li class="social-icon"><a href="#"><img src="img/photography-icon.svg" alt="Shop for Graphics"></a></li>
+            <article class="hero">
+                <h1>Interactive Media</h1>
+                <h2>Portfolio</h2>
+                <h3>developed by gfenton</h3>
+                <a href="dev/Unlist.ca/index.html" target="_blank"><span class="play-icon"></span>Demo Reel</a>
+            </article>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <!-- SEO: Use descriptive alt text for images -->
+                    <li class="social-icon"><a href="#"><img src="img/facebook.svg" alt="Facebook profile"></a></li>
+                    <li class="social-icon"><a href="#"><img src="img/instagram.svg" alt="Instagram profile"></a></li>
+                    <li class="social-icon"><a href="#"><img src="img/photography-icon.svg" alt="Photography portfolio"></a></li>
                     <li class="social-icon"><a href="/dev/my-progressive-web-app/public/index.html"><img src="img/menu.svg" alt="Menu"></a></li>
                 </ul>
             </nav>
         </header>
+        
+        <!-- for alternate content in landscape mode on mobile phones -->
+        <aside class="mobile-phone-landscape-mode">
+            Add a QR code and contact info here.
+        </aside>
 
-    </div>
+        <footer>
+                <span>UX Designer Portfolio</span>
+                <address>Toronto, ON.</address>   
+        </footer>
 </body>
 </html>

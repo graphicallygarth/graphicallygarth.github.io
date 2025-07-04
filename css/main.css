@@ -15,84 +15,32 @@
 
 html {
   font-size: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-body {
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  background-color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.05)), url("../img/hero.png");
+  height: 85vh; /* Fallback for browsers that don't support 100dvh */
+  min-height: 100dvh; /* Full viewport height */
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.05)), url("../img/hero.png");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  overflow: visible;
 }
-
-.wrapper {
-  width: 100%;
-}
-
 /* Start Header */
 
-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* border: #ffffff 1px solid; */
-  height: 85vh; /* Fallback for browsers that don't support 100dvh */
-  height: 100dvh; /* Full viewport height */
-  padding: 0 0 80px 0;
-}
-
-article.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 0 0 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-icons li {
-  margin-left: 22px;
-}
-
-.social-icons li:nth-child(1) {
-  margin-left: 0px;
-}
-
-
-.social-icon img {
-  width: 34px;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-icon:hover img {
-  transform: scale(1.25);
-}
-
-/* nav flex item */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 60px 0px 100px 0px;
 }
 
 .hero h1 {
@@ -101,6 +49,7 @@ article.hero {
   font-weight: 100;
   color: white;
   opacity: 90%;
+  margin: 0px 0 0 0;
 }
 
 .hero h2 {
@@ -110,7 +59,7 @@ article.hero {
   font-weight: 100;
   color: whitesmoke;
   text-transform: uppercase;
-  padding: 42px 0px;
+  padding: 32px 0px;
   text-align: center;
 }
 
@@ -120,15 +69,13 @@ article.hero {
   font-weight: 100;
   color: white;
   opacity: 90%;
+  padding: 0 0 80px 0;
 }
 
-.hero a {
+.home .hero a {
   display: inline-block;
   font-size: 1.1rem;
   align-self: center;
-  padding: 14px 28px;
-  margin: 8vh 0 4vh 0;
-  opacity: 0;
   /* First slide in, then bounce (bounce starts sooner) */
   animation:
     slideFromTop 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
@@ -171,9 +118,11 @@ article.hero {
 
 .hero a:link,
 .hero a:visited {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: whitesmoke;
+  padding: 14px 28px;
+  margin: 0 0 50px 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 40px;
   text-decoration: none;
   font-family: 'Exo 2', sans-serif;
@@ -183,30 +132,130 @@ article.hero {
 }
 
 .hero a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: whitesmoke;
-  border: 1px solid rgba(255, 255, 255, 0.953);
+  background-color: rgba(0, 43, 197, 0.8);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   transform: scale(1.05);
 }
 
-@media (orientation: landscape) {
-  /* .hero h2 {
-    font-size: 6vw;
-  } */
+
+/* HOME NAVIGATION */
+
+nav {
+  padding: 0 0 50px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:nth-child(1) {
+  margin-left: 0px;
+}
+
+nav a {
+  display: block;
+  width: 36px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  transform: scale(1.25);
+}
+
+  /* HOME ASIDE - ALTERNATE CONTENT */
+
+.mobile-phone-landscape-mode {
+  display: none;
 }
 
 
-@media (min-width: 300px) {
-  .nav
+/* FOOTER */
+
+/* Center the address inside the footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: whitesmoke;
 }
 
 
-@media (min-width: 640px) {
-  /* .hero h2 {
-    font-size: 64px;
-  } */
+  /* MEDIA QUERIES */
+
+
+
+@media (hover: none) and (pointer: coarse) {
+
+  /* This CSS uses pseudo-classes (:hover, :active, :focus) to apply transform: scale(1.25) to navigation links when they are interacted with (hovered, clicked, or focused) on larger screens.
+  
+  To ensure a good user experience on touch devices (like phones and tablets), a media query @media (hover: none) and (pointer: coarse) is used to override the transform and prevent scaling on those devices, since hover effects are not practical or expected on touchscreens.
+  
+  This approach provides interactive feedback on desktop while maintaining usability on mobile. */
+    
+  nav a:hover,
+  nav a:active,
+  nav a:focus {
+    transform: none;
+  }
 }
 
-@media (min-width: 1024px) {
-  /* Add styles for large screens here if needed */
+
+@media (orientation: landscape) and (max-width: 930px) and (pointer: coarse) {  
+
+  /* This media query is activated when a mobile phone is put into landscape mode (viewport ≤ 930px) Intentional UX/UI — when the main design doesn't fit, show alternate content. Ensuring users get a clear, purposeful experience instead of a broken layout. */
+
+.mobile-phone-landscape-mode {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #e53935;
+  color: #000000;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  /* Center text and content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+}
+
+@media (max-height: 640px) {
+
+  .hero {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  height: 85vh; /* Fallback for browsers that don't support 100dvh */
+  min-height: 100dvh; /* Full viewport height */
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.05)), url("../img/hero.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
 }
