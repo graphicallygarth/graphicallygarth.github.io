@@ -240,7 +240,7 @@ footer{
 
 }
 
-@media (max-height: 640px) {
+@media (max-height: 600px) {
 
   h1, footer{
   display: none;
