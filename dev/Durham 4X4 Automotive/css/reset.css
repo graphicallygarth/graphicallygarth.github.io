@@ -23,6 +23,15 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+/* Add button reset here */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
