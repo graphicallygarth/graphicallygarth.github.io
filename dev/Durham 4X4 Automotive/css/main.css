@@ -3,8 +3,8 @@
 /* Start Global */
 
 :root {
-  --primary-blue: #005e9e;
-  --primary-yellow: #e6b222;
+  --primary: #202020;
+  --primary-red: #be0000;
   --primary-black: #313133;
   --secondary-blue: #007ebe;
   --dark-blue: #004e83;
@@ -29,14 +29,14 @@ body {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  background-color: #444;
+  background-color: var(--primary-red);
 }
 
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  border-top: var(--primary-yellow) solid 6px;
-  background-color: white;
+  padding: 30px 0 0 0;
+  background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -60,13 +60,6 @@ p {
   line-height: 2.4rem;
 }
 
-/* img {
-  display: block;
-  width: 100%;
-  height: auto;
-	margin: auto;
-} */
-
 
 .icons {
   display: flex;
@@ -80,9 +73,8 @@ p {
   height: 50px;
 }
 
-.feature-image {
-  margin-top: -1px;
-}
+
+/* Interactivity - Scale on Hover */
 
 @keyframes scale {
   0% {
@@ -109,45 +101,57 @@ p {
   transition: all 0.3s ease-out 0.1s;
 }
 
-.hidden-text-link {
-  visibility: hidden;
-  position: absolute;
-  left: -100vw;
-}
-
 /* Start Header */
 
-nav {
-  background-color: var(--primary-blue);
-  border-top: white solid 6px;
+header {
+  border-top: 6px solid rgb(0, 0, 0);
+  border-bottom: 6px solid rgb(0, 0, 0);
+  background-color: var(--primary);
+
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border-top: 4px solid rgb(255, 255, 255);
+  border-bottom: 4px solid rgb(255, 255, 255);
+}
+
 
 .logo {
-  width: 100px;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 75%;
-  margin: 0 auto;
-  padding: 12px 0px 10px 0px;
+  display: block;
+  width: auto;
+  height: 150px;
 }
 
 .menu-icon {
-  width: 40px;
+  display: block;
+  width: 36px;
+  margin: 0 0 0 30px;
 }
 
 .fa-icon {
   display: block;
 }
 
-.main-links li:nth-child(1),
-.main-links li:nth-child(2),
-.main-links li:nth-child(3)  {
-  display: none;
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
+
+.main-links {
+  display: flex;
+}
+
+.main-links ul {
+  display: none;
+  gap: 20px;
+}
+
+
 
 
 /* Start Home */
@@ -190,6 +194,19 @@ nav {
   margin: 0;
   padding: 10px 0;
   background-color: var(--secondary-blue);
+}
+
+.hero {
+  background-image: url('../img/red-jeep.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white; /* For text contrast */
 }
 
 /* Start Footer */
@@ -263,17 +280,14 @@ footer .shipping-terms {
 
 /* Start Breakpoints */
 
-@media (min-width: 900px) {
 
+@media (min-width: 768px) {
 
-  #menuIcon {
-    display: none;
-  }
-
-  .main-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  .main-links ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   }
 
   .main-links a {
@@ -281,7 +295,8 @@ footer .shipping-terms {
     width: 140px;
     text-align: center;
     padding: 10px 30px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.103);
+    border-radius: 25px;
     color: white;
     transition: 
       background-color 0.2s,
@@ -289,31 +304,12 @@ footer .shipping-terms {
       border-color 0.2s;
   }
 
-  .main-links li:nth-child(1),
-  .main-links li:nth-child(2) {
-    display: block;
-    padding: 0 20px 0 0;
-  }
-
-  .main-links li:nth-child(3)  {
-    display: block;
-    padding: 0;
-  }
-
- .main-links a:hover {
+  .main-links a:hover {
     border: 1px solid white;
     background-color: white;
     color: var(--dark-blue);
 
   }
-}
-
-
-@media (min-width: 768px) {
-
-	.home .feature-article {
-		width: 75%;
-	}
 
 	.home .feature-category {
 		display: grid;
