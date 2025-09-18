@@ -18,11 +18,13 @@
 			<!-- start header -->
 			<header>
 				<nav aria-label="main navigation">
+					
+					
 					<div class="nav-links">
 						<a href="index.html" class="logo-link">
 							<img class="logo" src="img/Durham4x4Automotive.png" alt="Durham 4x4 Automotive Logo">
 						</a>
-						<div class="main-links">
+						<div class="menu">
 							<ul>
 								<li><a href="#">Our Shop</a></li>
 								<li><a href="#">Reviews</a></li>
@@ -30,12 +32,22 @@
 								<li><a class="active" aria-current="page" href="#">Events</a></li>
 								<li><a href="#">Contact</a></li>
 							</ul>
-							<button class="menu-icon" id="menuIcon" aria-label="Open menu" aria-expanded="false" aria-controls="dropdownMenu">
-								<img src="img/menu.svg" alt="Menu" class="menu-svg">
+							<button class="menu-icon" id="menuIcon" aria-label="Open menu" aria-expanded="false" aria-controls="dropdownMenu"><img src="img/menu.svg" alt="Menu" class="menu-svg">
 							</button>
 						</div>
-					</div>
+					</div>	
+
 				</nav>
+
+					<div class="mobile-menu">
+						<ul>
+							<li><a href="#">Our Shop</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a class="active" aria-current="page" href="#">Events</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>	
 			</header>
 
 			<!-- start main -->
@@ -137,6 +149,17 @@
 
 		</div>
 	</div>
+
+	 <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 </html>

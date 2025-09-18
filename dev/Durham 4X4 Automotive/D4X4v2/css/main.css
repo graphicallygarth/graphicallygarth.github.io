@@ -146,17 +146,22 @@ nav {
   width: 100%;
 }
 
-.main-links {
+.menu {
   display: flex;
   padding: 0 0 0 30px;
   margin: 0 15% 0 0;
 }
 
-.main-links ul {
+.menu ul {
   display: none;
   gap: 16px;
 }
 
+.mobile-menu {
+  display: block;
+  width: 100%;
+  background-color: green;
+}
 
 /* Start Home */
 
@@ -304,14 +309,14 @@ footer .shipping-terms {
     display: none;
   }
 
-  .main-links ul {
+  .menu ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
-  .main-links a {
+  .menu a {
     display: block;
     width: 124px;
     text-align: center;
@@ -325,16 +330,16 @@ footer .shipping-terms {
       border-color 0.2s;
   }
 
-  .main-links a:hover {
+  .menu a:hover {
     border: 1px solid white;
     background-color: white;
     color: var(--primary-black);
     font-weight: 400;
   }
 
-  .main-links a.active,
-  .main-links a.active:hover,
-  .main-links a[aria-current="page"] {
+  .menu a.active,
+  .menu a.active:hover,
+  .menu a[aria-current="page"] {
   color: whitesmoke;
   background: var(--primary-red);
   font-weight: 300;
