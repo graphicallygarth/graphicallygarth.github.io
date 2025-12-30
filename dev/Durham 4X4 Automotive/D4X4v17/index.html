@@ -58,7 +58,8 @@
 						<!-- YouTube hero video (background-style embed; keep site lightweight) -->
 						<iframe
 							class="hero-video"
-							src="https://www.youtube-nocookie.com/embed/Yn4-pX-XblU?autoplay=1&mute=1&loop=1&playlist=Yn4-pX-XblU&controls=0&rel=0&playsinline=1"
+							data-video-id="Yn4-pX-XblU"
+							src=""
 							title="Durham 4x4 Automotive hero video"
 							frameborder="0"
 							allow="autoplay; encrypted-media; picture-in-picture"
@@ -319,6 +320,24 @@
 			const embed = document.querySelector('.hero-video');
 			if (!hero || !media || !embed) return;
 
+			const videoId = embed.getAttribute('data-video-id');
+			const origin = (window.location && window.location.origin) ? window.location.origin : '';
+			const buildEmbedSrc = () => {
+				const base = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}`;
+				const params = new URLSearchParams({
+					autoplay: '1',
+					mute: '1',
+					loop: '1',
+					playlist: videoId,
+					controls: '0',
+					rel: '0',
+					playsinline: '1',
+				});
+				// Explicit origin can help prevent player config issues in some environments.
+				if (origin) params.set('origin', origin);
+				return `${base}?${params.toString()}`;
+			};
+
 			// Start with fallback image enabled; reveal embed once it loads.
 			embed.style.opacity = '0';
 			embed.style.transition = 'opacity 0.5s ease-in-out';
@@ -343,6 +362,16 @@
 					return;
 				}
 			} catch (e) { /* no-op */ }
+
+			// If we have a valid video id, (re)apply src after preferences checks.
+			try {
+				if (videoId) {
+					embed.src = buildEmbedSrc();
+				}
+			} catch (e) {
+				// If URLSearchParams/template literals fail for some reason, fall back to background only.
+				hero.classList.add('video-failed');
+			}
 
 			// Track embed loading state
 			let embedLoaded = false;
