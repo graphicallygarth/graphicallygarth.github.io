@@ -24,19 +24,18 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'videos/'
-                    }
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'videos/[name][ext]'
                 }
             }
         ]
     },
     devServer: {
-        contentBase: path.join(__dirname, 'public'),
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
         compress: true,
         port: 9000,
         historyApiFallback: true
