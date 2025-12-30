@@ -363,7 +363,6 @@
 				if (!embedLoaded && !embedError) {
 					embedError = true;
 					console.log('Hero media failed to load, showing fallback background');
-					media.style.display = 'none';
 					hero.classList.add('video-failed');
 				}
 			};
@@ -377,7 +376,7 @@
 					console.log('Hero media loading timeout, showing fallback');
 					handleEmbedError();
 				}
-			}, 7000);
+			}, 15000);
 		});
 
 		// When hamburger button is clicked, open or close the mobile menu
