@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Durham 4x4 Automotive - v14 Video Hero</title>
+	<meta name="description" content="Durham 4x4 Automotive - Top-tier automotive services for Jeep enthusiasts. Expert repairs, maintenance, and customizations.">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="home container">
+		<div class="wrapper">
+			<header>
+				<nav aria-label="main navigation">
+					<div class="menu-wrapper">
+						<div class="menu">
+							<div class="logo-link">
+								<a href="index.html">
+									<img src="../assets/img/Durham4x4Automotive.png" alt="Durham 4x4 Automotive Logo">
+								</a>
+								<a href="tel:+19054359999" class="phone-number" aria-label="Call Durham 4x4 Automotive at (905) 435-9999">Call: (905) 435-9999</a>
+							</div>
+							<ul>
+								<li><a class="active" aria-current="page"  href="#">Services</a></li>
+								<li><a href="#">Book Now</a></li>
+							</ul>
+						</div>
+						<button class="menu-icon" id="menuIcon" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+							<div class="hamburger"></div>
+						</button>
+					</div>
+
+					<div class="mobile-menu" id="mobile-menu">
+						<article>
+							<h1>Contact Us</h1>
+							<h2><a href="tel:+19054359999" class="phone-number" aria-label="Call Durham 4x4 Automotive at (905) 435-9999">(905) 435-9999</a></h2>
+							<a href="https://maps.app.goo.gl/xaUPXVmWgpSWcLaU6" target="_blank" rel="noopener noreferrer">Directions</a>
+							<a href="#">Book Now</a>
+						</article>
+						<ul>
+							<li><a href="#">Our Shop</a></li>
+							<li><a class="active" aria-current="page" href="#">Auto Services</a></li>
+							<li><a href="#">Latest Events</a></li>
+							<li><a href="common-problems.html">Common Repairs</a></li>
+							<li><a href="#">Reviews</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<main>
+				<!-- Video Hero Example -->
+				<section class="hero hero-with-video">
+					
+					<!-- Fallback handled by video loading logic -->
+					<div class="hero-media" aria-hidden="true">
+						<video class="hero-video" autoplay muted playsinline loop preload="auto" disablepictureinpicture aria-hidden="true" data-poster="../assets/img/durham-4x4-automotive.jpg">
+							<!-- Jeep placeholder video (Durham 4X4 Automotive branded content) -->
+							<!-- Mobile and Desktop - using same source as placeholder -->
+							<source src="../assets/img/jeep-placeholder-video.mp4" type="video/mp4" media="(max-width: 767px)">
+							<source src="../assets/img/jeep-placeholder-video.mp4" type="video/mp4" media="(min-width: 768px)">
+							<!-- Future optimized sources (add when processed)
+							<source src="../assets/img/jeep-hero-720p.webm" type="video/webm" media="(max-width: 767px)">
+							<source src="../assets/img/jeep-hero-720p.mp4" type="video/mp4" media="(max-width: 767px)">
+							<source src="../assets/img/jeep-hero-1080p.webm" type="video/webm" media="(min-width: 768px)">
+							<source src="../assets/img/jeep-hero-1080p.mp4" type="video/mp4" media="(min-width: 768px)">
+							-->
+							Your browser does not support the video tag.
+						</video>
+					</div>
+
+					<div class="hero-overlay">
+						<h1>Maintenance, Mods, and Miracles.</h1>
+						<h2>If we can't fix it, you're screwed — Durham 4X4 Automotive</h2>
+						<a href="#" class="hero-cta-btn">Book an Appointment</a>
+					</div>
+
+				</section>
+
+				<section class="feature-article">
+					<article>
+						<h2>Done right the first time — every wrench, every rig.</h2>
+						<p>Whether you're in the shop for a few customizations or your Jeep needs routine maintenance, you'll get the kind of personal service not found anywhere else. We know the parts you need, the equipment that works best, and the mechanical challenges you'll face on and offroad.</p>
+						<p>It's never just about fixing your vehicle — it's about making sure you know the job is done right, the first time. We've built our business around trust, shared knowledge, and providing top-tier automotive services. Our customers know it, the community trusts us, and we're committed to it.</p>
+						<p>When you choose Durham 4X4 Automotive, you get one of GTA’s best 4x4 shops, and you'll be joining a family of like-minded Jeepers who share a passion for torque, trails, and turning wrenches.</p>
+					</article>
+						<div class="hero-cta">
+							<a href="#" class="hero-cta-btn">Get a Free Quote</a>
+						</div>
+				</section>
+
+				<section class="feature-category-cards">
+					<figure>
+						<div class="jeep-card jeep-red"></div>
+						<figcaption><h2>Transmission Repair<br> Clutch Replacements, Transfer Case Service, and Rough Shifting Fixes.</h2></figcaption>
+					</figure>
+					<figure>
+						<div class="jeep-card jeep-blue"></div>
+						<figcaption><h2>4x4 Suspension Lifts<br>High-performance shocks, springs, wheels & tires.</h2></figcaption>
+					</figure>
+					<figure>
+						<div class="jeep-card jeep-dark"></div>
+						<figcaption><h2>Engine Diagnostics & Repair<br>No-start issues, misfiring, and complete engine solutions.</h2></figcaption>
+					</figure>
+					<figure>
+						<div class="jeep-card jeep-gray"></div>
+						<figcaption><h2>Regular Maintenance<br>Oil changes, brake service, and tune-ups.</h2></figcaption>
+					</figure>
+				</section>
+
+				<div class="feature-image">
+					<img src="https://placehold.co/800x300/313133/ffffff?text=Customization+Services" alt="Durham 4X4 Automotive Feature">
+				</div>
+
+				<div class="reviews">
+					
+					<div class="review-cards-wrapper" role="region" aria-label="Customer reviews">
+						<!-- Content comes first in DOM for screen readers -->
+						<div id="review-content" aria-live="polite" aria-atomic="true">
+							
+							<!-- Review 1: Mike Thompson - Jeep Wrangler Unlimited Transmission Repair -->
+							<article class="review-card active" itemscope itemtype="https://schema.org/Review">
+								<header class="review-header">
+									<div class="reviewer-info">
+										<div class="review-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+											<div class="stars" aria-label="5 out of 5 stars">
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+											</div>
+											<meta itemprop="ratingValue" content="5">
+											<meta itemprop="bestRating" content="5">
+										</div>
+										<div class="customer-name">
+											<strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+												<span itemprop="name">Mike Thompson</span>
+											</strong>
+										</div>
+										<div class="service-type" itemscope itemtype="https://schema.org/Service">
+											<span itemprop="name">Transmission Repair</span>
+										</div>
+										<div class="vehicle-type" itemscope itemtype="https://schema.org/Vehicle">
+											<span itemprop="name">2021 Jeep Wrangler Unlimited</span>
+										</div>
+									</div>
+								</header>
+								<div class="review-content">
+									<!-- Review Content: Customer testimonial text -->
+									<p itemprop="reviewBody">"Outstanding service! They fixed my Jeep Wrangler's transmission issues quickly and professionally. The team really knows their stuff when it comes to 4x4 vehicles. I've been to other shops before, but none compare to the expertise and customer service I received here."</p>
+								</div>
+							</article>
+
+							<!-- Review 2: Sarah Johnson - Jeep Cherokee Brake Service -->
+							<article class="review-card" itemscope itemtype="https://schema.org/Review">
+								<header class="review-header">
+									<div class="reviewer-info">
+										<div class="review-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+											<div class="stars" aria-label="5 out of 5 stars">
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star empty">★</span>
+											</div>
+											<meta itemprop="ratingValue" content="5">
+											<meta itemprop="bestRating" content="5">
+										</div>
+										<div class="customer-name">
+											<strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+												<span itemprop="name">Sarah Johnson</span>
+											</strong>
+										</div>
+										<div class="service-type" itemscope itemtype="https://schema.org/Service">
+											<span itemprop="name">Brake Service</span>
+										</div>
+										<div class="vehicle-type" itemscope itemtype="https://schema.org/Vehicle">
+											<span itemprop="name">2018 Jeep Cherokee</span>
+										</div>
+									</div>
+								</header>
+								<div class="review-content">
+									<!-- Review Content: Second customer testimonial -->
+									<p itemprop="reviewBody">"Best automotive shop in Durham! Fair pricing, honest mechanics, and they always explain what needs to be done. Highly recommend for any Jeep owner. The staff is knowledgeable and friendly, and they don't try to oversell you."</p>
+								</div>
+							</article>
+
+							<!-- Review 3: David Chen - Jeep Grand Cherokee Brake Repair -->
+							<article class="review-card" itemscope itemtype="https://schema.org/Review">
+								<header class="review-header">
+									<div class="reviewer-info">
+										<div class="review-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+											<div class="stars" aria-label="4 out of 5 stars">
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star filled">★</span>
+												<span class="star half">★</span>
+											</div>
+											<meta itemprop="ratingValue" content="4">
+											<meta itemprop="bestRating" content="5">
+										</div>
+										<div class="customer-name">
+											<strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+												<span itemprop="name">David Chen</span>
+											</strong>
+										</div>
+										<div class="service-type" itemscope itemtype="https://schema.org/Service">
+											<span itemprop="name">2.5" Teraflex suspension lift</span>
+										</div>
+										<div class="vehicle-type" itemscope itemtype="https://schema.org/Vehicle">
+											<span itemprop="name">2004 Jeep Wrangler Rubicon</span>
+										</div>
+									</div>
+								</header>
+								<div class="review-content">
+									<!-- Navigation Buttons: Previous/Next arrows for third review -->
+									<!-- Review Content: Third customer testimonial (4-star rating) -->
+									<p itemprop="reviewBody">"Great experience with my Cherokee's brake repair. The only reason it's not 5 stars is the wait time, but the quality of work was excellent. They kept me informed throughout the process and the final result was perfect."</p>
+								</div>
+							</article>
+
+							<!-- Navigation: Dots and Progress Bar centered -->
+							<div class="review-navigation">
+								<div class="review-dots">
+									<span class="dot active" data-slide="0" tabindex="0" role="button" aria-label="View review 1"></span>
+									<span class="dot" data-slide="1" tabindex="0" role="button" aria-label="View review 2"></span>
+									<span class="dot" data-slide="2" tabindex="0" role="button" aria-label="View review 3"></span>
+								</div>
+								<!-- Progress Bar -->
+								<div class="progress-bar-container">
+									<div>
+										<div class="progress-bar" id="progressBar"></div>
+									</div>
+								</div>
+								<div class="google-review-button-wrapper">
+									<a href="https://maps.app.goo.gl/xaUPXVmWgpSWcLaU6" target="_blank" rel="noopener noreferrer" class="google-review-btn">Add a Google Review</a>
+								</div>
+							</div>
+
+						</div>
+
+						</div>
+
+				</div>
+
+				<section class="wrangler-services">
+					<h2>We Service All Jeep Wrangler Generations</h2>
+					
+					<div class="service-icons">
+						<a class="model-link" href="common-problems.html#cj" aria-label="CJ common problems and maintenance">
+							<figure>
+								<img src="../assets/img/icon-1.svg" alt="CJ Model">
+								<figcaption>CJ</figcaption>
+							</figure>
+						</a>
+						<a class="model-link" href="common-problems.html#cj" aria-label="CJ common problems and maintenance">
+							<figure>
+								<img src="../assets/img/icon-1.svg" alt="">
+								<figcaption>YJ</figcaption>
+							</figure>
+						</a>
+						<a class="model-link" href="common-problems.html#tj" aria-label="TJ common problems and maintenance">
+							<figure>
+								<img src="../assets/img/icon-2.svg" alt="">
+								<figcaption>TJ</figcaption>
+							</figure>
+						</a>
+						<a class="model-link" href="common-problems.html#lj" aria-label="LJ common problems and maintenance">
+							<figure>
+								<img src="../assets/img/icon-3.svg" alt="">
+								<figcaption>LJ</figcaption>
+							</figure>
+						</a>
+						<a class="model-link" href="common-problems.html#jk" aria-label="JK common problems and maintenance">
+							<figure>
+								<img src="../assets/img/icon-4.svg" alt="">
+								<figcaption>JK</figcaption>
+							</figure>
+						</a>
+						<a class="model-link" href="common-problems.html#jl" aria-label="JL common problems and maintenance">
+							<figure>
+								<img src="../assets/img/icon-5.svg" alt="">
+								<figcaption>JL</figcaption>
+							</figure>
+						</a>
+					</div>
+
+					<p>We know what makes each Jeep Wrangler model tick — from classic ’90s TJs to trusted JKs, newer model JLs, and Gladiators. You can count on us for diagnostics, repairs, and regular maintenance to keep your rig running strong.</p>
+
+					<a href="common-problems.html" class="services-cta-btn">Learn About Common Problems</a>
+
+				</section>
+
+			<footer>
+				<div class="primary-footer">
+					<ul class="footer-text-links">
+						<li><a href="#">Our Shop</a></li>
+							<li><a class="active" aria-current="page" href="#">Services</a></li>
+							<li><a href="https://maps.app.goo.gl/xaUPXVmWgpSWcLaU6" target="_blank" rel="noopener noreferrer">Directions</a></li>
+					</ul>
+					<ul class="footer-social-icons">
+						<li><a href="#"><img src="../assets/img/facebook.svg" alt="Facebook"></a></li>
+						<li><a href="#"><img src="../assets/img/instagram.svg" alt="Instagram"></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>www.Durham4x4Automotive.com<br>&copy;2025</p>
+				</div>
+			</footer>
+		</div>
+		</div>
+		<script>
+				// Reverted: rely on CSS aspect-ratio cover behavior (no JS sizing)
+
+		// Enhanced video loading with smooth transitions and proper fallback handling
+		document.addEventListener('DOMContentLoaded', function () {
+			const video = document.querySelector('.hero-video');
+			const hero = document.querySelector('.hero');
+			if (!video || !hero) return;
+
+			// Set up initial state - video hidden
+			video.style.opacity = '0';
+			video.style.transition = 'opacity 0.5s ease-in-out';
+
+			const connection = navigator.connection || navigator.webkitConnection || navigator.mozConnection;
+			if (connection && connection.saveData) {
+				// Respect Save-Data preference - show fallback background
+				try {
+					video.pause();
+					video.removeAttribute('src');
+					video.querySelectorAll('source').forEach(s => s.remove());
+					video.load();
+					const media = video.parentElement;
+					if (media) media.style.display = 'none';
+					hero.classList.add('video-failed');
+				} catch (e) { /* no-op */ }
+				return;
+			}
+
+			// Track video loading state
+			let videoLoaded = false;
+			let videoError = false;
+
+			// Handle successful video loading
+			const handleVideoReady = () => {
+				if (!videoError && !videoLoaded) {
+					videoLoaded = true;
+					video.style.opacity = '1';
+					// Ensure hero doesn't have fallback background
+					hero.classList.remove('video-failed');
+				}
+			};
+
+			// Handle video loading error
+			const handleVideoError = () => {
+				if (!videoLoaded && !videoError) {
+					videoError = true;
+					console.log('Video failed to load, showing fallback background');
+					// Hide video container and show background
+					const media = video.parentElement;
+					if (media) media.style.display = 'none';
+					hero.classList.add('video-failed');
+				}
+			};
+
+			// Set up video event listeners
+			video.addEventListener('loadeddata', handleVideoReady);
+			video.addEventListener('canplay', handleVideoReady);
+			video.addEventListener('canplaythrough', handleVideoReady);
+			
+			video.addEventListener('error', handleVideoError);
+			video.addEventListener('abort', handleVideoError);
+			video.addEventListener('stalled', () => {
+				// If video stalls for too long, show fallback
+				setTimeout(() => {
+					if (!videoLoaded) handleVideoError();
+				}, 3000);
+			});
+
+			// Timeout fallback - if video doesn't load within 5 seconds, show background
+			setTimeout(() => {
+				if (!videoLoaded && !videoError) {
+					console.log('Video loading timeout, showing fallback');
+					handleVideoError();
+				}
+			}, 5000);
+
+			// Handle video play/pause based on visibility
+			let inView = true;
+			if ('IntersectionObserver' in window && hero) {
+				const io = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						inView = entry.isIntersecting;
+						if (!inView && videoLoaded) {
+							video.pause();
+						} else if (inView && videoLoaded && document.visibilityState === 'visible') {
+							video.play().catch(() => {});
+						}
+					});
+				}, { root: null, threshold: 0.2 });
+				io.observe(hero);
+			}
+
+			document.addEventListener('visibilitychange', function () {
+				if (!videoLoaded) return;
+				if (document.visibilityState === 'hidden') {
+					video.pause();
+				} else if (inView) {
+					video.play().catch(() => {});
+				}
+			});
+		});
+
+		// When hamburger button is clicked, open or close the mobile menu
+		document.getElementById("menuIcon").addEventListener("click", function() {
+			const menu = document.getElementById("mobile-menu");
+			const isOpen = menu.classList.contains("show");
+			if (isOpen) {
+				menu.classList.remove("show");
+				this.setAttribute("aria-expanded", "false");
+				this.setAttribute("aria-label", "Open menu");
+				this.classList.remove("active");
+			} else {
+				menu.classList.add("show");
+				this.setAttribute("aria-expanded", "true");
+				this.setAttribute("aria-label", "Close menu");
+				this.classList.add("active");
+			}
+		});
+
+		// Close mobile menu when switching to desktop view
+		window.addEventListener("resize", function() {
+			const menu = document.getElementById("mobile-menu");
+			const menuIcon = document.getElementById("menuIcon");
+			if (window.innerWidth >= 1200) {
+				menu.classList.remove("show");
+				menuIcon.setAttribute("aria-expanded", "false");
+				menuIcon.setAttribute("aria-label", "Open menu");
+				menuIcon.classList.remove("active");
+			}
+		});
+
+		// Close menu when user clicks on any menu link
+		document.querySelectorAll('.mobile-menu ul a').forEach(link => {
+			link.addEventListener('click', function() {
+				const menu = document.getElementById("mobile-menu");
+				const menuIcon = document.getElementById("menuIcon");
+				menu.classList.remove("show");
+				menuIcon.setAttribute("aria-expanded", "false");
+				menuIcon.setAttribute("aria-label", "Open menu");
+				menuIcon.classList.remove("active");
+			});
+		});
+
+		// Initialize Review Carousel functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const reviewCards = document.querySelectorAll('.review-card');
+			const dots = document.querySelectorAll('.dot');
+			const progressBar = document.getElementById('progressBar');
+			let currentSlide = 0;
+			const totalSlides = reviewCards.length;
+			let autoSlideInterval;
+			let progressInterval;
+			const autoSlideDelay = 15000; // 15 seconds
+			const progressUpdateInterval = 50; // Update progress every 50ms for smooth animation
+
+			function showSlide(index) {
+				currentSlide = ((index % totalSlides) + totalSlides) % totalSlides;
+				resetProgressBar();
+				startProgressBar();
+				reviewCards.forEach((card, i) => {
+					if (i === currentSlide) {
+						card.style.display = 'block';
+						card.offsetHeight;
+						card.classList.add('active');
+					} else {
+						card.classList.remove('active');
+					}
+				});
+				dots.forEach((dot, i) => {
+					if (i === currentSlide) {
+						dot.classList.add('active');
+						dot.style.pointerEvents = 'none';
+						dot.style.cursor = 'default';
+					} else {
+						dot.classList.remove('active');
+						dot.style.pointerEvents = 'auto';
+						dot.style.cursor = 'pointer';
+					}
+				});
+			}
+
+			function nextSlide() { showSlide(currentSlide + 1); }
+			function prevSlide() { showSlide(currentSlide - 1); }
+			function goToSlide(index) { showSlide(index); }
+
+			function startAutoSlide() {
+				stopAutoSlide();
+				autoSlideInterval = setInterval(nextSlide, autoSlideDelay);
+				startProgressBar();
+			}
+			function stopAutoSlide() { if (autoSlideInterval) { clearInterval(autoSlideInterval); autoSlideInterval = null; } stopProgressBar(); }
+			function startProgressBar() {
+				stopProgressBar();
+				let startTime = Date.now();
+				if (progressBar) {
+					progressBar.style.width = '0%';
+					progressInterval = setInterval(function() {
+						const elapsed = Date.now() - startTime;
+						const progress = Math.min((elapsed / autoSlideDelay) * 100, 100);
+						progressBar.style.width = progress + '%';
+						if (progress >= 100) { progressBar.style.width = '100%'; }
+					}, progressUpdateInterval);
+				}
+			}
+			function stopProgressBar() { if (progressInterval) { clearInterval(progressInterval); progressInterval = null; } }
+			function resetProgressBar() { stopProgressBar(); if (progressBar) { progressBar.style.width = '0%'; } }
+			function resetAutoSlide() { stopAutoSlide(); resetProgressBar(); setTimeout(startAutoSlide, 200); }
+
+			document.addEventListener('click', function(e) {
+				if (e.target.classList.contains('dot')) {
+					e.preventDefault();
+					const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+					goToSlide(slideIndex);
+					resetAutoSlide();
+				}
+			});
+
+			showSlide(0);
+			startAutoSlide();
+
+			document.addEventListener('keydown', function(e) {
+				if (e.target.closest('.review-cards-wrapper')) {
+					switch(e.key) {
+						case 'ArrowLeft': e.preventDefault(); prevSlide(); resetAutoSlide(); break;
+						case 'ArrowRight': e.preventDefault(); nextSlide(); resetAutoSlide(); break;
+						case 'Home': e.preventDefault(); goToSlide(0); resetAutoSlide(); break;
+						case 'End': e.preventDefault(); goToSlide(totalSlides - 1); resetAutoSlide(); break;
+					}
+				}
+			});
+		});
+		</script>
+</body>
+</html>

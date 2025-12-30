@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Durham 4x4 Automotive</title>
+	<meta name="description" content="Durham 4x4 Automotive - Top-tier automotive services for Jeep enthusiasts. Expert repairs, maintenance, and customizations.">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="home container">
+		<div class="wrapper">
+			<header>
+				<nav aria-label="main navigation">
+					<div class="menu-wrapper">
+						<div class="menu">	
+							<a class="logo-link" href="index.html">
+								<img src="img/Durham4x4Automotive.png" alt="Durham 4x4 Automotive Logo">
+							</a>
+							<ul>
+								<li><a href="#">Our Shop</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a class="active" aria-current="page" href="#">Events</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+						<button class="menu-icon" id="menuIcon" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+							<div class="hamburger"></div>
+						</button>
+					</div>
+
+					<div class="mobile-menu" id="mobile-menu">
+						<article>
+							<h1>Call Us</h1>
+							<h2>(905) 435-9999</h2>
+						</article>
+						<ul>
+							<li><a href="#">Our Shop</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a class="active" aria-current="page" href="#">Events</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<main>
+				<div class="hero"></div>
+				<section class="feature-article">
+					<article>
+						<h1>Top-Tier Services</h1>
+						<h2>Our customers know it, the community trusts it, we're committed to it — every wrench, every rig.</h2>
+						<p>Whether you're in the shop for a few customizations or your Jeep needs routine maintenance, you'll get the kind of personal service not found anywhere else. We know the parts you need, the equipment that works best, and the mechanical challenges you'll face on and offroad.</p>
+						<p>It's never just about fixing your vehicle — it's about making sure you know the job was done right, the first time. We've built our business around trust, shared knowledge, and providing top-tier automotive services.</p>
+						<p>When you choose us, you're not just getting a top-tier mechanic — you're joining a family of like-minded Jeepers who share a passion for torque, trails, and turning wrenches.</p>
+					</article>
+				</section>
+				
+				<section class="feature-category">
+					<figure>
+						<img src="img/protein-shake.jpg" alt="Protein Shakes">
+						<figcaption><h2>Jeep Nights</h2></figcaption>
+					</figure>
+					<figure>
+						<img src="img/weight-loss-groups.jpg" alt="Weight Loss Groups">
+						<figcaption><h2>Latest Events</h2></figcaption>
+					</figure>
+					<figure>
+						<img src="img/weight-loss-programs.jpg" alt="Weight Loss Programs">
+						<figcaption><h2>Trail Tours</h2></figcaption>
+					</figure>
+					<figure>
+						<img src="img/weight-loss-trends.jpg" alt="Common Jeep Problems">
+						<figcaption><h2>Common Problems</h2></figcaption>
+					</figure>
+				</section>
+			</main>
+
+			<footer>
+				<div class="icons">
+					<img src="img/icon-1.svg" alt="Fitness Icon Standing">
+					<img src="img/icon-2.svg" alt="Fitness Icon Arms Out">
+					<img src="img/icon-3.svg" alt="Fitness Icon Knee Up">
+					<img src="img/icon-4.svg" alt="Fitness Icon Right Arm Reach">
+					<img src="img/icon-5.svg" alt="Fitness Icon Arms Up">
+				</div>
+				<div class="feature-image">
+					<img src="img/feature.png" alt="Feature">
+				</div>
+				<div class="primary-footer">
+					<ul class="footer-text-links">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<ul class="footer-social-icons">
+						<li><a href="#"><img src="img/facebook.svg" alt="Facebook"></a></li>
+						<li><a href="#"><img src="img/instagram.svg" alt="Instagram"></a></li>
+						<li><a href="#"><img src="img/twitter.svg" alt="Twitter"></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>www.Durham4x4Automotive.com<br>&copy;2025</p>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script>
+		// Mobile menu toggle functionality
+		document.getElementById("menuIcon").addEventListener("click", function() {
+			const menu = document.getElementById("mobile-menu");
+			
+			// Check if menu is currently open
+			if (menu.classList.contains("show")) {
+				// Close the menu
+				closeMenu();
+			} else {
+				// Open the menu
+				// Add CSS class "show" to display full-screen menu (.mobile-menu.show { transform: translateX(0); })
+				menu.classList.add("show");
+				this.setAttribute("aria-expanded", "true");
+				this.setAttribute("aria-label", "Close menu");
+				// Add CSS class "active" to hamburger icon (transforms to X)
+				this.classList.add("active");
+				// Prevent body scroll when menu is open
+				document.body.style.overflow = 'hidden';
+			}
+		});
+
+		// Close menu function
+		function closeMenu() {
+			const menu = document.getElementById("mobile-menu");
+			const menuIcon = document.getElementById("menuIcon");
+			// Remove CSS class "show" to hide menu (.mobile-menu transforms back)
+			menu.classList.remove("show");
+			menuIcon.setAttribute("aria-expanded", "false");
+			menuIcon.setAttribute("aria-label", "Open menu");
+			// Remove CSS class "active" from hamburger icon (transforms back from X)
+			menuIcon.classList.remove("active");
+			// Restore body scroll
+			document.body.style.overflow = '';
+		}
+
+		// Close menu when clicking on menu links
+		document.querySelectorAll('.mobile-menu ul a').forEach(link => {
+			link.addEventListener('click', closeMenu);
+		});
+
+		// Hide menu on touch scroll (mobile) - but only if scrolled significantly
+		window.addEventListener("touchmove", function() {
+			const menu = document.getElementById("mobile-menu");
+			
+			// Check if CSS class "show" is present
+			if (menu.classList.contains("show")) {
+				const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+				if (currentScroll > 500) { // Increased threshold for better UX
+					closeMenu();
+				}
+			}
+		});
+
+		// Hide menu on window resize (desktop)
+		window.addEventListener("resize", function() {
+			if (window.innerWidth >= 1200) {
+				// Remove CSS class "show" to hide menu on desktop
+				closeMenu();
+			}
+		});
+
+		// Close menu with Escape key
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape') {
+				const menu = document.getElementById("mobile-menu");
+				if (menu.classList.contains("show")) {
+					closeMenu();
+				}
+			}
+		});
+	</script>
+</body>
+</html>
