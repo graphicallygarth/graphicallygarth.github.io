@@ -301,93 +301,97 @@
 			</footer>
 		</div>
 		</div>
-			<script src="https://www.youtube.com/iframe_api"></script>
 			<script>
-				// YouTube Hero Video: use the Iframe API so we can request autoplay+mute and
-				// handle player errors (e.g., configuration error 153) with a clean fallback.
-				let heroYouTubePlayer;
-
-				function onYouTubeIframeAPIReady() {
+				// Hero YouTube background (minimal):
+				// - Keep fallback image by default
+				// - Load the YouTube Iframe API only when appropriate
+				// - Reveal the video only when the player is actually ready
+				(() => {
 					const hero = document.querySelector('.hero');
 					const media = document.querySelector('.hero-media');
 					const container = document.getElementById('hero-player');
 					if (!hero || !media || !container) return;
 
-					// Start with the fallback visible; reveal video once player is ready.
+					// Start clean: fallback visible, video hidden (CSS hides .hero-media until .video-ready).
 					hero.classList.add('video-failed');
+					hero.classList.remove('video-ready');
 
 					const connection = navigator.connection || navigator.webkitConnection || navigator.mozConnection;
-					if (connection && connection.saveData) {
-						media.style.display = 'none';
-						return;
-					}
+					if (connection && connection.saveData) return;
 
 					try {
-						if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-							media.style.display = 'none';
-							return;
-						}
+						if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 					} catch (e) { /* no-op */ }
 
 					const videoId = container.getAttribute('data-video-id');
-					const origin = (window.location && window.location.origin) ? window.location.origin : undefined;
+					if (!videoId) return;
 
-					// If the API is blocked or videoId missing, keep fallback.
-					if (!window.YT || !window.YT.Player || !videoId) {
+					let ready = false;
+					const fail = () => {
 						media.style.display = 'none';
-						return;
-					}
+						hero.classList.add('video-failed');
+						hero.classList.remove('video-ready');
+					};
 
-					heroYouTubePlayer = new YT.Player('hero-player', {
-						videoId,
-						host: 'https://www.youtube-nocookie.com',
-						playerVars: {
-							autoplay: 1,
-							controls: 0,
-							rel: 0,
-							playsinline: 1,
-							loop: 1,
-							playlist: videoId,
-							disablekb: 1,
-							fs: 0,
-							origin,
-						},
-						events: {
-							onReady: (event) => {
-								try {
-									event.target.mute();
-									event.target.playVideo();
-								} catch (e) { /* no-op */ }
-
-								try {
-									const iframe = event.target.getIframe();
-									iframe.classList.add('hero-video');
-									iframe.setAttribute('title', 'Durham 4x4 Automotive hero video');
-									iframe.setAttribute('aria-hidden', 'true');
-									iframe.style.opacity = '1';
-								} catch (e) { /* no-op */ }
-
-								hero.classList.add('video-ready');
-								hero.classList.remove('video-failed');
-							},
-							onError: () => {
-								// Hide the player area and keep the fallback background image.
-								media.style.display = 'none';
-								hero.classList.add('video-failed');
-								hero.classList.remove('video-ready');
-							},
-						},
-					});
-
-					// If we don't get a playable player quickly, hide the embed to avoid showing error UI.
-					setTimeout(() => {
-						const iframe = container.querySelector('iframe');
-						if (!iframe) {
-							media.style.display = 'none';
-							hero.classList.add('video-failed');
-						}
+					// Hard timeout: if the API never loads or the player never becomes ready, stay on fallback.
+					const timeoutId = setTimeout(() => {
+						if (!ready) fail();
 					}, 8000);
-				}
+
+					window.onYouTubeIframeAPIReady = function () {
+						try {
+							// If the API is present but player construction fails, keep fallback.
+							// Note: we intentionally reveal the video ONLY on onReady.
+							new YT.Player('hero-player', {
+								videoId,
+								host: 'https://www.youtube-nocookie.com',
+								playerVars: {
+									autoplay: 1,
+									mute: 1,
+									controls: 0,
+									rel: 0,
+									playsinline: 1,
+									loop: 1,
+									playlist: videoId,
+									disablekb: 1,
+									fs: 0,
+								},
+								events: {
+									onReady: (event) => {
+									ready = true;
+									clearTimeout(timeoutId);
+
+									try {
+										event.target.mute();
+										event.target.playVideo();
+									} catch (e) { /* no-op */ }
+
+									try {
+										const iframe = event.target.getIframe();
+										iframe.classList.add('hero-video');
+										iframe.setAttribute('title', 'Durham 4x4 Automotive hero video');
+										iframe.setAttribute('aria-hidden', 'true');
+										iframe.style.opacity = '1';
+									} catch (e) { /* no-op */ }
+
+									hero.classList.add('video-ready');
+									hero.classList.remove('video-failed');
+								},
+								onError: () => fail(),
+							},
+						});
+						} catch (e) {
+							fail();
+						}
+					};
+
+					// Load the Iframe API (async). If blocked, the timeout keeps the fallback.
+					const script = document.createElement('script');
+					script.src = 'https://www.youtube.com/iframe_api';
+					script.async = true;
+					script.onerror = fail;
+					document.head.appendChild(script);
+				})();
 
 		// When hamburger button is clicked, open or close the mobile menu
 		document.getElementById("menuIcon").addEventListener("click", function() {
