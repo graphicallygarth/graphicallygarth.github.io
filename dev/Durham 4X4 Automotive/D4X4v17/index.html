@@ -55,17 +55,8 @@
 					
 					<!-- Fallback handled by video loading logic -->
 					<div class="hero-media" aria-hidden="true">
-						<!-- YouTube hero video (background-style embed; keep site lightweight) -->
-						<iframe
-							class="hero-video"
-							data-video-id="Yn4-pX-XblU"
-							src=""
-							title="Durham 4x4 Automotive hero video"
-							frameborder="0"
-							allow="autoplay; encrypted-media; picture-in-picture"
-							allowfullscreen
-							aria-hidden="true">
-						</iframe>
+						<!-- YouTube hero video (Iframe API injects the iframe) -->
+						<div id="hero-player" data-video-id="Yn4-pX-XblU" aria-hidden="true"></div>
 					</div>
 
 					<div class="hero-overlay">
@@ -310,102 +301,91 @@
 			</footer>
 		</div>
 		</div>
+			<script src="https://www.youtube.com/iframe_api"></script>
 			<script>
-				// Reverted: rely on CSS aspect-ratio cover behavior (no JS sizing)
+				// YouTube Hero Video: use the Iframe API so we can request autoplay+mute and
+				// handle player errors (e.g., configuration error 153) with a clean fallback.
+				let heroYouTubePlayer;
 
-		// Enhanced hero media loading with smooth transitions and proper fallback handling
-		document.addEventListener('DOMContentLoaded', function () {
-			const hero = document.querySelector('.hero');
-			const media = document.querySelector('.hero-media');
-			const embed = document.querySelector('.hero-video');
-			if (!hero || !media || !embed) return;
+				function onYouTubeIframeAPIReady() {
+					const hero = document.querySelector('.hero');
+					const media = document.querySelector('.hero-media');
+					const container = document.getElementById('hero-player');
+					if (!hero || !media || !container) return;
 
-			const videoId = embed.getAttribute('data-video-id');
-			const origin = (window.location && window.location.origin) ? window.location.origin : '';
-			const buildEmbedSrc = () => {
-				const base = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}`;
-				const params = new URLSearchParams({
-					autoplay: '1',
-					mute: '1',
-					loop: '1',
-					playlist: videoId,
-					controls: '0',
-					rel: '0',
-					playsinline: '1',
-				});
-				// Explicit origin can help prevent player config issues in some environments.
-				if (origin) params.set('origin', origin);
-				return `${base}?${params.toString()}`;
-			};
-
-			// Start with fallback image enabled; reveal embed once it loads.
-			embed.style.opacity = '0';
-			embed.style.transition = 'opacity 0.5s ease-in-out';
-
-			const connection = navigator.connection || navigator.webkitConnection || navigator.mozConnection;
-			if (connection && connection.saveData) {
-				// Respect Save-Data preference - show fallback background only
-				try {
-					embed.removeAttribute('src');
-					media.style.display = 'none';
+					// Start with the fallback visible; reveal video once player is ready.
 					hero.classList.add('video-failed');
-				} catch (e) { /* no-op */ }
-				return;
-			}
 
-			// Respect reduced motion preference - show fallback background only
-			try {
-				if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-					embed.removeAttribute('src');
-					media.style.display = 'none';
-					hero.classList.add('video-failed');
-					return;
+					const connection = navigator.connection || navigator.webkitConnection || navigator.mozConnection;
+					if (connection && connection.saveData) {
+						media.style.display = 'none';
+						return;
+					}
+
+					try {
+						if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+							media.style.display = 'none';
+							return;
+						}
+					} catch (e) { /* no-op */ }
+
+					const videoId = container.getAttribute('data-video-id');
+					const origin = (window.location && window.location.origin) ? window.location.origin : undefined;
+
+					// If the API is blocked or videoId missing, keep fallback.
+					if (!window.YT || !window.YT.Player || !videoId) {
+						media.style.display = 'none';
+						return;
+					}
+
+					heroYouTubePlayer = new YT.Player('hero-player', {
+						videoId,
+						host: 'https://www.youtube-nocookie.com',
+						playerVars: {
+							autoplay: 1,
+							controls: 0,
+							rel: 0,
+							playsinline: 1,
+							loop: 1,
+							playlist: videoId,
+							disablekb: 1,
+							fs: 0,
+							origin,
+						},
+						events: {
+							onReady: (event) => {
+								try {
+									event.target.mute();
+									event.target.playVideo();
+								} catch (e) { /* no-op */ }
+
+								try {
+									const iframe = event.target.getIframe();
+									iframe.classList.add('hero-video');
+									iframe.setAttribute('title', 'Durham 4x4 Automotive hero video');
+									iframe.setAttribute('aria-hidden', 'true');
+									iframe.style.opacity = '1';
+								} catch (e) { /* no-op */ }
+
+								hero.classList.remove('video-failed');
+							},
+							onError: () => {
+								// Hide the player area and keep the fallback background image.
+								media.style.display = 'none';
+								hero.classList.add('video-failed');
+							},
+						},
+					});
+
+					// If we don't get a playable player quickly, hide the embed to avoid showing error UI.
+					setTimeout(() => {
+						const iframe = container.querySelector('iframe');
+						if (!iframe) {
+							media.style.display = 'none';
+							hero.classList.add('video-failed');
+						}
+					}, 8000);
 				}
-			} catch (e) { /* no-op */ }
-
-			// If we have a valid video id, (re)apply src after preferences checks.
-			try {
-				if (videoId) {
-					embed.src = buildEmbedSrc();
-				}
-			} catch (e) {
-				// If URLSearchParams/template literals fail for some reason, fall back to background only.
-				hero.classList.add('video-failed');
-			}
-
-			// Track embed loading state
-			let embedLoaded = false;
-			let embedError = false;
-
-			// Handle successful embed loading
-			const handleEmbedReady = () => {
-				if (!embedError && !embedLoaded) {
-					embedLoaded = true;
-					embed.style.opacity = '1';
-					hero.classList.remove('video-failed');
-				}
-			};
-
-			// Handle embed loading error/timeout
-			const handleEmbedError = () => {
-				if (!embedLoaded && !embedError) {
-					embedError = true;
-					console.log('Hero media failed to load, showing fallback background');
-					hero.classList.add('video-failed');
-				}
-			};
-
-			// Set up embed event listeners
-			embed.addEventListener('load', handleEmbedReady);
-
-			// Timeout fallback - if embed doesn't load quickly, show background
-			setTimeout(() => {
-				if (!embedLoaded && !embedError) {
-					console.log('Hero media loading timeout, showing fallback');
-					handleEmbedError();
-				}
-			}, 15000);
-		});
 
 		// When hamburger button is clicked, open or close the mobile menu
 		document.getElementById("menuIcon").addEventListener("click", function() {
