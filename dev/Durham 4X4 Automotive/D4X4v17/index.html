@@ -367,12 +367,14 @@
 									iframe.style.opacity = '1';
 								} catch (e) { /* no-op */ }
 
+								hero.classList.add('video-ready');
 								hero.classList.remove('video-failed');
 							},
 							onError: () => {
 								// Hide the player area and keep the fallback background image.
 								media.style.display = 'none';
 								hero.classList.add('video-failed');
+								hero.classList.remove('video-ready');
 							},
 						},
 					});
