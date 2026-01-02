@@ -51,7 +51,7 @@
 
 			<main>
 				<!-- Video Hero Example -->
-				<section class="hero hero-with-video video-failed">
+				<section class="hero hero-with-video">
 					
 					<!-- Fallback handled by video loading logic -->
 					<div class="hero-media" aria-hidden="true">
@@ -312,8 +312,8 @@
 					const container = document.getElementById('hero-player');
 					if (!hero || !media || !container) return;
 
-					// Start clean: fallback visible, video hidden (CSS hides .hero-media until .video-ready).
-					hero.classList.add('video-failed');
+					// Start clean: video hidden until ready; only show fallback if loading fails.
+					hero.classList.remove('video-failed');
 					hero.classList.remove('video-ready');
 
 					const connection = navigator.connection || navigator.webkitConnection || navigator.mozConnection;
