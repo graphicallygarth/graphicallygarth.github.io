@@ -369,10 +369,26 @@ nav {
   min-height: calc(100vh - 140px);
   color: white;
   /* Background image removed - handled by video poster on failure */
+  background-color: var(--primary-black);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   overflow: hidden; /* ensure oversized media is clipped */
+}
+
+/* Prefer modern viewport units on mobile browsers (avoids 100vh address-bar jumps) */
+@supports (height: 100svh) {
+  .hero,
+  .hero-overlay {
+    min-height: calc(100svh - 140px);
+  }
+}
+
+@supports (height: 100dvh) {
+  .hero,
+  .hero-overlay {
+    min-height: calc(100dvh - 140px);
+  }
 }
 
 /* Add fallback background class for when video fails */
@@ -405,16 +421,42 @@ nav {
   top: 50%;
   left: 50%;
   /* 16:9 sizing trick: keep aspect ratio while covering container */
-  width: 100vw;
-  height: 56.25vw;
-  min-width: 100%;
-  min-height: 100%;
+  width: max(100vw, calc(100vh * 16 / 9));
+  height: max(100vh, calc(100vw * 9 / 16));
   transform: translate(-50%, -50%);
   border: 0;
   pointer-events: none;
   /* Start with opacity 0 for smooth transition */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+@supports (height: 100dvh) {
+  .hero-media .hero-video {
+    width: max(100vw, calc(100dvh * 16 / 9));
+    height: max(100dvh, calc(100vw * 9 / 16));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-overlay {
+    padding: 70px 20px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 40px;
+    padding: 0 0 18px 0;
+  }
+
+  .hero-overlay h2 {
+    font-size: 20px;
+    padding: 0 0 28px 0;
+  }
+
+  .hero-cta-btn {
+    padding: 16px 28px;
+    font-size: 16px;
+  }
 }
 
 .hero-overlay {
